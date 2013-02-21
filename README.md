@@ -1,4 +1,3 @@
-blog
+This is a blog.
 ====
 
-write sth.
