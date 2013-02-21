@@ -2,7 +2,7 @@ Issue list when make a build of chromium.
 ====
 
 
-1. Build Chromium in Linux(x86), status: build success
+1. Build Chromium in Linux(x86)
 ====
 For version: chrome - Revision 183078: /trunk/src/chrome/common
 
@@ -99,9 +99,9 @@ The gclient sync failure
     No package 'libpci' found
     gyp: Call to 'pkg-config --cflags libpci' returned exit status 1. while loading dependencies of /home/kris/svn/chromium/src/base/base.gyp while loading dependencies of /home/kris/svn/chromium/src/build/all.gyp while trying to load /home/kris/svn/chromium/src/build/all.gyp
 
-Fixed by: reference build/install-build-deps.sh, install depandence mannually: 
+Fixed by: reference from build/install-build-deps.sh, install depandence mannually: 
 
-    # pick up the page reference from install-build-deps.sh and execute, the contents in wiki is not the latest.
+    # pick up the package from install-build-deps.sh and execute, the contents in wiki is not the latest.
     sudo apt-get install apache2.2-bin bison curl elfutils fakeroot flex g++ gperf language-pack-fr libapache2-mod-php5 libasound2-dev libbz2-dev libcairo2-dev libcups2-dev libcurl4-gnutls-dev libelf-dev libgconf2-dev libgl1-mesa-dev libglib2.0-dev libglu1-mesa-dev libgnome-keyring-dev libgtk2.0-dev libkrb5-dev libnspr4-dev libnss3-dev libpam0g-dev libpci-dev libsctp-dev libspeechd-dev libsqlite3-dev libssl-dev libudev-dev libwww-perl libxslt1-dev libxss-dev libxt-dev libxtst-dev mesa-common-dev metacity patch perl php5-cgi pkg-config python python-cherrypy3 python-dev python-psutil rpm ruby subversion ttf-dejavu-core ttf-indic-fonts ttf-kochi-gothic ttf-kochi-mincho ttf-thai-tlwg wdiff git-core
 
 
@@ -188,4 +188,26 @@ Resolved by, update source codes:
             http://www.cs.unipr.it/ppl/download/ftp/releases/${CT_PPL_VERSION}  \
 
     # rebuild cross-ng
+
+
+ct-ng build error:
+----
+
+    [ERROR]    make[2]: *** [cc1] Error 1
+    [ERROR]    make[1]: *** [all-gcc] Error 2
+    [ERROR]   
+    [ERROR]  >>
+    [ERROR]  >>  Build failed in step 'Installing pass-1 core C compiler'
+    [ERROR]  >>        called in step '(top-level)'
+    [ERROR]  >>
+    [ERROR]  >>  Error happened in: CT_DoExecLog[scripts/functions@257]
+    [ERROR]  >>        called from: do_cc_core_backend[scripts/build/cc/gcc.sh@448]
+    [ERROR]  >>        called from: do_cc_core_pass_1[scripts/build/cc/gcc.sh@101]
+    [ERROR]  >>        called from: main[scripts/crosstool-NG.sh@632]
+    [ERROR]  >>
+    [ERROR]  >>  For more info on this error, look at the file: 'build.log'
+    [ERROR]  >>  There is a list of known issues, some with workarounds, in:
+    [ERROR]  >>      '/home/kris/x-tools/crosstool-ng/share/doc/crosstool-ng/ct-ng.hg+default-4e8bfe85da61/B - Known issues.txt'
+  
+Neet to fix.
 
