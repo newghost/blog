@@ -376,10 +376,13 @@ Error:
     v8/src/../include/v8.h:493: error: 'uint16_t' does not name a type
     v8/src/../include/v8.h:822: error: 'FILE' has not been declared
 
-Trying fix by rebuild chromium x86 version, first, rollback the .gyp and .bashrc, and reboot.
+I have removed the out folder before corss compile chromium, trying fix by rebuild chromium on x86, 
+first, rollback the ~/.gyp/include.gypi and .bashrc, and reboot.
+Sync and rebuild chromium on Linux(x86)
 
-    make -j2 BUILDTYPE=Release chrome  #failed
-    make BUILDTYPE=Release chrome      #waiting
-
-
+    ~/svn/chromium/src$ gclient sync --revision src@183149
+    ~/svn/chromium/src$ ./build/install-build-deps.sh
+    ~/svn/chromium/src$ ./build/gyp_chromium -Dchromeos=0       # Doesn't build chromeos
+    ~/svn/chromium/src$ make -j2 chrome                         # waiting few hours
+    #  ~/svn/chromium/src$ make -j2 BUILDTYPE=Release chrome       # waiting few hours
 
