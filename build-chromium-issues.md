@@ -304,6 +304,74 @@ Install manually:
     sudo apt-get install libc6-armel-cross libc6-dev-armel-cross libgcc1-armel-cross libgomp1-armel-cross linux-libc-dev-armel-cross      libgcc1-dbg-armel-cross libgomp1-dbg-armel-cross binutils-arm-linux-gnueabi cpp-arm-linux-gnueabi gcc-arm-linux-gnueabi g++-arm-linux-gnueabi libmudflap0-dbg-armel-cross
 
 
+Set toolchain environment variables: 
+----
 
+    # make a directory to build rootfs
+    mkdir ~/svn/chromium/rootfs
+    sublime $HOME/.bashrc
+    #add 
+    # crosstool
+    export PATH=$HOME/x-tools/crosstool-ng/bin:$PATH
+    # crosstool-build
+    export GYP_DEFINES="target_arch=arm sysroot=~/svn/chromium/rootfs linux_use_tcmalloc=0 armv7=1 arm_thumb=1"
+    export CROSSTOOL=~/x-tools/arm-cortex_a8-linux-gnueabi/bin/arm-cortex_a8-linux-gnueabi
+    export CXX=$CROSSTOOL-g++
+    export CC=$CROSSTOOL-gcc
+    export AR=$CROSSTOOL-ar
+    export AS=$CROSSTOOL-as
+    export RANLIB=$CROSSTOOL-ranlib
+    
+After edit the bashrc, it's better test the enviroment variables by ls, etc:
 
+    kris@kris-pc:~$ ls $RANLIB
+    /home/kris/x-tools/arm-cortex_a8-linux-gnueabi/bin/arm-cortex_a8-linux-gnueabi-ranlib
 
+Build as normal
+----
+
+    make -r -j2 BUILDTYPE=Release chrome
+
+Error: 
+
+      TOUCH out/Release/obj.target/third_party/mesa/mesa_headers.stamp
+      CXX(target) out/Release/obj.target/v8_base/v8/src/accessors.o
+    In file included from v8/src/../include/v8.h:44,
+                     from v8/src/v8.h:52,
+                     from v8/src/accessors.cc:28:
+    v8/src/../include/v8stdint.h:34:19: warning: stdio.h: No such file or directory
+    v8/src/../include/v8stdint.h:50:20: warning: stdint.h: No such file or directory
+    In file included from v8/src/v8globals.h:32,
+                     from v8/src/v8.h:53,
+                     from v8/src/accessors.cc:28:
+    v8/src/checks.h:31:20: warning: string.h: No such file or directory
+    In file included from v8/src/v8utils.h:31,
+                     from v8/src/v8.h:56,
+                     from v8/src/accessors.cc:28:
+    v8/src/utils.h:31:20: warning: stdlib.h: No such file or directory
+    In file included from v8/src/unicode-inl.h:31,
+                     from v8/src/objects.h:37,
+                     from v8/src/elements.h:32,
+                     from v8/src/objects-inl.h:38,
+                     from v8/src/v8.h:60,
+                     from v8/src/accessors.cc:28:
+    v8/src/unicode.h:31:23: warning: sys/types.h: No such file or directory
+    In file included from v8/src/elements.h:33,
+                     from v8/src/objects-inl.h:38,
+                     from v8/src/v8.h:60,
+                     from v8/src/accessors.cc:28:
+    v8/src/heap.h:31:18: warning: math.h: No such file or directory
+    In file included from v8/src/v8.h:64,
+                     from v8/src/accessors.cc:28:
+    v8/src/mark-compact-inl.h:32:20: error: memory.h: No such file or directory
+    In file included from v8/src/v8.h:52,
+                     from v8/src/accessors.cc:28:
+    v8/src/../include/v8.h:478: error: 'uint16_t' has not been declared
+    v8/src/../include/v8.h:484: error: 'uint16_t' has not been declared
+    v8/src/../include/v8.h:487: error: 'uint16_t' does not name a type
+    v8/src/../include/v8.h:493: error: 'uint16_t' does not name a type
+    v8/src/../include/v8.h:822: error: 'FILE' has not been declared
+
+Blocked by this error, will check these:
+  1. incompative of G++ or C library?
+  2. unstable version of chromium?
