@@ -105,7 +105,10 @@ Fixed by: reference from build/install-build-deps.sh, install depandence mannual
     sudo apt-get install apache2.2-bin bison curl elfutils fakeroot flex g++ gperf language-pack-fr libapache2-mod-php5 libasound2-dev libbz2-dev libcairo2-dev libcups2-dev libcurl4-gnutls-dev libelf-dev libgconf2-dev libgl1-mesa-dev libglib2.0-dev libglu1-mesa-dev libgnome-keyring-dev libgtk2.0-dev libkrb5-dev libnspr4-dev libnss3-dev libpam0g-dev libpci-dev libsctp-dev libspeechd-dev libsqlite3-dev libssl-dev libudev-dev libwww-perl libxslt1-dev libxss-dev libxt-dev libxtst-dev mesa-common-dev metacity patch perl php5-cgi pkg-config python python-cherrypy3 python-dev python-psutil rpm ruby subversion ttf-dejavu-core ttf-indic-fonts ttf-kochi-gothic ttf-kochi-mincho ttf-thai-tlwg wdiff git-core
 
 
-2. Build log for Arm, status: build failed at crosstool-ng
+Finally it build successfully, go to next step.
+
+
+2. Cross-compile chromium for Arm
 ====
 [Reference] (https://code.google.com/p/chromium/wiki/LinuxChromiumArm#Recipe2:_Explicit_Cross_compiling)
 
