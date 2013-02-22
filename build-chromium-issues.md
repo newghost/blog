@@ -1,4 +1,4 @@
-Issue list when make a build of chromium.
+Issues when make a build of chromium.
 ====
 
 
