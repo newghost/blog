@@ -6,9 +6,10 @@ Issue list when make a build of chromium.
 ====
 Based version: chrome - Revision 183078: /trunk/src/chrome/common
 
-Permission Dennied: http://code.google.com/p/chromium/wiki/LinuxBuildInstructions
+Permission Dennied:
 ----
 
+  Cannot visit [wiki](http://code.google.com/p/chromium/wiki/LinuxBuildInstructions)
   Caused by fireware, fixed by
   - 404: using wallproxy or VPN. 
   - timeout: re-execute the command from error message, and then sync again.
@@ -56,11 +57,11 @@ Lots of 404s when apt-get install after reinstall 64bit system, checked,
     W: Failed to fetch http://cn.archive.ubuntu.com/ubuntu/dists/precise-backports/universe/i18n/Translation-en_US  Connection failed
     W: Failed to fetch http://cn.archive.ubuntu.com/ubuntu/dists/precise-backports/universe/i18n/Translation-en  Connection failedf
   
-Fixed by: seems caused by the unstable of cn.archive.ubuntu.com, maybe choose American location will not run into this problem.
+Fixed by: seems caused by the unreachble of cn.archive.ubuntu.com, maybe choose American location will not run into this problem.
 
     sudo gedit /etc/apt/sources.list  #remove all the prefix "cn." in the sources list.
 
-Install depanded library error
+Install packages' error
 ----
 
     kris@kris-pc:~$ sudo apt-get install bison fakeroot flex g++ g++-multilib gperf \
@@ -99,7 +100,7 @@ The gclient sync failure
     No package 'libpci' found
     gyp: Call to 'pkg-config --cflags libpci' returned exit status 1. while loading dependencies of /home/kris/svn/chromium/src/base/base.gyp while loading dependencies of /home/kris/svn/chromium/src/build/all.gyp while trying to load /home/kris/svn/chromium/src/build/all.gyp
 
-Fixed by: reference from build/install-build-deps.sh, install depandence mannually: 
+Fixed by: reference from build/install-build-deps.sh, install depandence mannually, contents is out of date on wiki. 
 
     # pick up the package from install-build-deps.sh and execute, the contents in wiki is not the latest.
     sudo apt-get install apache2.2-bin bison curl elfutils fakeroot flex g++ gperf language-pack-fr libapache2-mod-php5 libasound2-dev libbz2-dev libcairo2-dev libcups2-dev libcurl4-gnutls-dev libelf-dev libgconf2-dev libgl1-mesa-dev libglib2.0-dev libglu1-mesa-dev libgnome-keyring-dev libgtk2.0-dev libkrb5-dev libnspr4-dev libnss3-dev libpam0g-dev libpci-dev libsctp-dev libspeechd-dev libsqlite3-dev libssl-dev libudev-dev libwww-perl libxslt1-dev libxss-dev libxt-dev libxtst-dev mesa-common-dev metacity patch perl php5-cgi pkg-config python python-cherrypy3 python-dev python-psutil rpm ruby subversion ttf-dejavu-core ttf-indic-fonts ttf-kochi-gothic ttf-kochi-mincho ttf-thai-tlwg wdiff git-core
@@ -251,7 +252,7 @@ Trying fixed by rebuild with A8 device, which with the ppl-0.10.2
     kris@kris-pc:~/x-tools/toolchain-build$ ct-ng build.2
 
 Version list of A8 device:
-We notice that the version of linux kernal is very new but the version of gcc (4.4.6) is lower than Debian based (4.6.3), will use this build and have a try, wish it works:
+Notice that the version of linux kernal is very new but the version of gcc (4.4.6) is lower than Debian based (4.6.3), will use this build and have a try, wish it works:
 
     [INFO ]  Extracting and patching toolchain components
     [EXTRA]    Extracting 'linux-3.7.3'
