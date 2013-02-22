@@ -193,6 +193,31 @@ Resolved by, update source codes:
 ct-ng build error:
 ----
 
+Version list of armv6 device:
+
+    [EXTRA]    Extracting 'linux-3.6.11'
+    [EXTRA]    Patching 'linux-3.6.11'
+    [EXTRA]    Extracting 'gmp-5.0.2'
+    [EXTRA]    Patching 'gmp-5.0.2'
+    [EXTRA]    Extracting 'mpfr-3.1.0'
+    [EXTRA]    Patching 'mpfr-3.1.0'
+    [EXTRA]    Extracting 'ppl-0.11.2'
+    [EXTRA]    Patching 'ppl-0.11.2'
+    [EXTRA]    Extracting 'cloog-ppl-0.15.11'
+    [EXTRA]    Patching 'cloog-ppl-0.15.11'
+    [EXTRA]    Extracting 'mpc-0.9'
+    [EXTRA]    Patching 'mpc-0.9'
+    [EXTRA]    Extracting 'binutils-2.22'
+    [EXTRA]    Patching 'binutils-2.22'
+    [EXTRA]    Extracting 'gcc-linaro-4.7-2013.02'
+    [EXTRA]    Patching 'gcc-linaro-4.7-2013.02'
+    [EXTRA]    Extracting 'eglibc-2_16'
+    [EXTRA]    Patching 'eglibc-2_16'
+    [EXTRA]    Extracting 'eglibc-ports-2_16'
+    [EXTRA]    Patching 'eglibc-ports-2_16'
+
+    ....
+
     [ERROR]    make[2]: *** [cc1] Error 1
     [ERROR]    make[1]: *** [all-gcc] Error 2
     [ERROR]   
@@ -208,11 +233,77 @@ ct-ng build error:
     [ERROR]  >>  For more info on this error, look at the file: 'build.log'
     [ERROR]  >>  There is a list of known issues, some with workarounds, in:
     [ERROR]  >>      '/home/kris/x-tools/crosstool-ng/share/doc/crosstool-ng/ct-ng.hg+default-4e8bfe85da61/B - Known issues.txt'
-  
-trying build with A8 device:
+
+Seems these error is caused by the latest version of ppl-0.11.2
+
+    [ERROR]     /to `home/std::length_error::~length_error()'kris
+    [ERROR]    /kris/home/xkris-/xtools-/toolstoolchain/-buildtoolchain--armv6/build.-build/armv6src//ppl.-0.11.2build//src/srcVariable.inlines.hh/:43ppl: -undefined0.11.2 /reference srcto/ `Temp.inlines.hh:52std::length_error::length_error(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&):' 
+
+Trying fixed by rebuild with A8 device, which with the ppl-0.10.2
 
     kris@kris-pc:~/x-tools$ rm toolchain-build -r
     kris@kris-pc:~/x-tools$ mkdir toolchain-build
     kris@kris-pc:~/x-tools$ cd toolchain-build
     kris@kris-pc:~/x-tools/toolchain-build$ ct-ng arm-cortex_a8-linux-gnueabi
+    kris@kris-pc:~/x-tools/toolchain-build$ ct-ng build.2
+
+Version list of A8 device:
+We notice that the version of linux kernal is very new but the version of gcc (4.4.6) is lower than Debian based (4.6.3), will use this build and have a try, wish it works:
+
+    [INFO ]  Extracting and patching toolchain components
+    [EXTRA]    Extracting 'linux-3.7.3'
+    [EXTRA]    Patching 'linux-3.7.3'
+    [EXTRA]    Extracting 'gmp-4.3.2'
+    [EXTRA]    Patching 'gmp-4.3.2'
+    [EXTRA]    Extracting 'mpfr-2.4.2'
+    [EXTRA]    Patching 'mpfr-2.4.2'
+    [EXTRA]    Extracting 'ppl-0.10.2'
+    [EXTRA]    Patching 'ppl-0.10.2'
+    [EXTRA]    Extracting 'cloog-ppl-0.15.9'
+    [EXTRA]    Patching 'cloog-ppl-0.15.9'
+    [EXTRA]    Extracting 'libelf-0.8.13'
+    [EXTRA]    Patching 'libelf-0.8.13'
+    [EXTRA]    Extracting 'binutils-2.20.1a'
+    [EXTRA]    Patching 'binutils-2.20.1a'
+    [EXTRA]    Extracting 'gcc-4.4.6'
+    [EXTRA]    Patching 'gcc-4.4.6'
+    [EXTRA]    Extracting 'glibc-2.9'
+    [EXTRA]    Patching 'glibc-2.9'
+    [EXTRA]    Extracting 'glibc-ports-2.9'
+    [EXTRA]    Patching 'glibc-ports-2.9'
+    [EXTRA]    Extracting 'dmalloc-5.5.2'
+    [EXTRA]    Patching 'dmalloc-5.5.2'
+    [EXTRA]    Extracting 'duma_2_5_15'
+    [EXTRA]    Patching 'duma-2_5_15'
+    [EXTRA]    Extracting 'gdb-6.8a'
+    [EXTRA]    Patching 'gdb-6.8a'
+    [EXTRA]    Extracting 'ncurses-5.9'
+    [EXTRA]    Patching 'ncurses-5.9'
+    [EXTRA]    Extracting 'expat-2.1.0'
+    [EXTRA]    Patching 'expat-2.1.0'
+    [EXTRA]    Extracting 'ltrace-0.5.3'
+    [EXTRA]    Patching 'ltrace-0.5.3'
+    [EXTRA]    Extracting 'strace-4.5.19'
+    [EXTRA]    Patching 'strace-4.5.19'
+
+Build rootfs
+----
+Install packages for arm cross toolchain, these content is out of date in offical wiki, 
+find the arm_list in chromium/src/build/install-build-deps.sh:
+
+    # arm cross toolchain packages needed to build chrome on arm
+    arm_list="libc6-armel-cross libc6-dev-armel-cross libgcc1-armel-cross
+              libgomp1-armel-cross linux-libc-dev-armel-cross
+              libgcc1-dbg-armel-cross libgomp1-dbg-armel-cross
+              binutils-arm-linux-gnueabi cpp-arm-linux-gnueabi
+              gcc-arm-linux-gnueabi g++-arm-linux-gnueabi
+              libmudflap0-dbg-armel-cross"
+              
+Install manually:
+
+    sudo apt-get install libc6-armel-cross libc6-dev-armel-cross libgcc1-armel-cross libgomp1-armel-cross linux-libc-dev-armel-cross      libgcc1-dbg-armel-cross libgomp1-dbg-armel-cross binutils-arm-linux-gnueabi cpp-arm-linux-gnueabi gcc-arm-linux-gnueabi g++-arm-linux-gnueabi libmudflap0-dbg-armel-cross
+
+
+
+
 
