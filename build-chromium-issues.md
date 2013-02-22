@@ -2,9 +2,9 @@ Issue list when make a build of chromium.
 ====
 
 
-1. Build Chromium in Linux(x86)
+1. Build Chromium on Linux(x86)
 ====
-For version: chrome - Revision 183078: /trunk/src/chrome/common
+Based version: chrome - Revision 183078: /trunk/src/chrome/common
 
 Permission Dennied: http://code.google.com/p/chromium/wiki/LinuxBuildInstructions
 ----
@@ -187,7 +187,7 @@ Resolved by, update source codes:
             # here:  http://www.cs.unipr.it/ppl/Download/ftp/releases/${CT_PPL_VERSION}  \
             http://www.cs.unipr.it/ppl/download/ftp/releases/${CT_PPL_VERSION}  \
 
-    # rebuild cross-ng
+    # rebuild cross-ng, and it can download ppl from source.
 
 
 ct-ng build error:
@@ -209,5 +209,10 @@ ct-ng build error:
     [ERROR]  >>  There is a list of known issues, some with workarounds, in:
     [ERROR]  >>      '/home/kris/x-tools/crosstool-ng/share/doc/crosstool-ng/ct-ng.hg+default-4e8bfe85da61/B - Known issues.txt'
   
-Neet to fix.
+trying build with A8 device:
+
+    kris@kris-pc:~/x-tools$ rm toolchain-build -r
+    kris@kris-pc:~/x-tools$ mkdir toolchain-build
+    kris@kris-pc:~/x-tools$ cd toolchain-build
+    kris@kris-pc:~/x-tools/toolchain-build$ ct-ng arm-cortex_a8-linux-gnueabi
 
