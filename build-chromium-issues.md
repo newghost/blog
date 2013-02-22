@@ -376,6 +376,10 @@ Error:
     v8/src/../include/v8.h:493: error: 'uint16_t' does not name a type
     v8/src/../include/v8.h:822: error: 'FILE' has not been declared
 
-Blocked by this error, will check these:
-  1. incompative of G++ or C library?
-  2. unstable version of chromium?
+Trying fix by rebuild chromium x86 version, first, rollback the .gyp and .bashrc, and reboot.
+
+    make -j2 BUILDTYPE=Release chrome  #failed
+    make BUILDTYPE=Release chrome      #waiting
+
+
+
