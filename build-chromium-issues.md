@@ -345,36 +345,6 @@ Error:
                      from v8/src/accessors.cc:28:
     v8/src/../include/v8stdint.h:34:19: warning: stdio.h: No such file or directory
     v8/src/../include/v8stdint.h:50:20: warning: stdint.h: No such file or directory
-    In file included from v8/src/v8globals.h:32,
-                     from v8/src/v8.h:53,
-                     from v8/src/accessors.cc:28:
-    v8/src/checks.h:31:20: warning: string.h: No such file or directory
-    In file included from v8/src/v8utils.h:31,
-                     from v8/src/v8.h:56,
-                     from v8/src/accessors.cc:28:
-    v8/src/utils.h:31:20: warning: stdlib.h: No such file or directory
-    In file included from v8/src/unicode-inl.h:31,
-                     from v8/src/objects.h:37,
-                     from v8/src/elements.h:32,
-                     from v8/src/objects-inl.h:38,
-                     from v8/src/v8.h:60,
-                     from v8/src/accessors.cc:28:
-    v8/src/unicode.h:31:23: warning: sys/types.h: No such file or directory
-    In file included from v8/src/elements.h:33,
-                     from v8/src/objects-inl.h:38,
-                     from v8/src/v8.h:60,
-                     from v8/src/accessors.cc:28:
-    v8/src/heap.h:31:18: warning: math.h: No such file or directory
-    In file included from v8/src/v8.h:64,
-                     from v8/src/accessors.cc:28:
-    v8/src/mark-compact-inl.h:32:20: error: memory.h: No such file or directory
-    In file included from v8/src/v8.h:52,
-                     from v8/src/accessors.cc:28:
-    v8/src/../include/v8.h:478: error: 'uint16_t' has not been declared
-    v8/src/../include/v8.h:484: error: 'uint16_t' has not been declared
-    v8/src/../include/v8.h:487: error: 'uint16_t' does not name a type
-    v8/src/../include/v8.h:493: error: 'uint16_t' does not name a type
-    v8/src/../include/v8.h:822: error: 'FILE' has not been declared
 
 I have removed the out folder before corss compile chromium, trying fix by rebuild chromium on x86, 
 first, rollback the ~/.gyp/include.gypi and .bashrc, and reboot.
@@ -384,5 +354,34 @@ Sync and rebuild chromium on Linux(x86)
     ~/svn/chromium/src$ ./build/install-build-deps.sh
     ~/svn/chromium/src$ ./build/gyp_chromium -Dchromeos=0       # Doesn't build chromeos
     ~/svn/chromium/src$ make -j2 chrome                         # waiting few hours
-    #  ~/svn/chromium/src$ make -j2 BUILDTYPE=Release chrome       # waiting few hours
+    ~/svn/chromium/src$ make -j2 BUILDTYPE=Release chrome       # waiting few hours
+    
+Uncommented the ~/.bashrc & .gypi, rebuild, still have errors:
+
+    In file included from out/Release/obj/gen/protoc_out/chrome/common/metrics/proto/chrome_experiments.pb.h:9,
+                 from out/Release/obj/gen/protoc_out/chrome/common/metrics/proto/chrome_experiments.pb.cc:4:
+    third_party/protobuf/src/google/protobuf/stubs/common.h:38:20: error: assert.h: No such file or directory
+    third_party/protobuf/src/google/protobuf/stubs/common.h:39:20: error: stdlib.h: No such file or directory
+    third_party/protobuf/src/google/protobuf/stubs/common.h:42:20: error: string.h: No such file or directory
+    third_party/protobuf/src/google/protobuf/stubs/common.h:48:20: error: stdint.h: No such file or directory
+    In file included from out/Release/obj/gen/protoc_out/chrome/common/metrics/proto/chrome_user_metrics_extension.pb.h:9,
+                 from out/Release/obj/gen/protoc_out/chrome/common/metrics/proto/chrome_user_metrics_extension.pb.cc:4:
+    third_party/protobuf/src/google/protobuf/stubs/common.h:38:20: error: assert.h: No such file or directory
+    third_party/protobuf/src/google/protobuf/stubs/common.h:39:20: error: stdlib.h: No such file or directory
+    third_party/protobuf/src/google/protobuf/stubs/common.h:42:20: error: string.h: No such file or directory
+    third_party/protobuf/src/google/protobuf/stubs/common.h:48:20: error: stdint.h: No such file or directory
+
+Find a similiar [issue](https://code.google.com/p/modpagespeed/issues/detail?id=612), seems it's a new issue,
+trying to
+
+  1. sync an old version of chromium.
+  2. find another toolchain, etc [Linaro](https://groups.google.com/a/chromium.org/forum/?fromgroups=#!topic/chromium-os-discuss/dZFE-xyWNXA)
+  3. Reference [Cross Building Chromium Browser] (https://wiki.linaro.org/Resources/HowTo/CrossBuildingChromiumBrowser) [Cross Compiling Chromium on Ubuntu - the multiarch way] (https://wiki.linaro.org/Platform/DevPlatform/CrossCompile/ChromiumCrossCompile)
+
+Sync and rebuild
+
+    #very old version
+    ~/svn/chromium/src$ gclient sync --revision src@108895
+    
+
 
