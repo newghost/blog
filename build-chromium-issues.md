@@ -409,9 +409,14 @@ Rised error here
     kris@kris-pc:~/svn/chromium/src$ clear
 
 Find samiliar [issue] (https://code.google.com/p/chromium/issues/detail?id=94518), trying to install package for chromium_os, reference from ./build/install-build-deps.sh
-Re-sync again, seems failed at
+Re-sync again, stopped at.
 
     Syncing projects:  98% (95/96), done.tive_client                       
     kris@kris-pc:~/svn/chromium$ /usr/bin/python src/build/download_nacl_toolchains.py --no-arm-trusted --optional-pnacl --pnacl-version 8097 --file-hash pnacl_linux_x86_32 e368da00aa7fd5f1958f8e817c8928df7da70bee --file-hash pnacl_linux_x86_64 8d76fec06ff9975ace6bbbfd01f3ba729c4b9a75 --file-hash pnacl_translator f9e28462709580ad7333d65c65dc56e40ed8752b --file-hash pnacl_mac_x86_32 4b7e08c62431459244a9e32fc1551918ee96cf34 --x86-version 8097 --file-hash mac_x86_newlib d0a34734e0356d2fd611ab781c05ee994dec9b5e --file-hash win_x86_newlib 6ed8ac51f53cb15328165ff1143d9611c40fc5d8 --file-hash linux_x86_newlib 569cfaa5820f18cfe179e5dcb9ef9e03b7d5cff9 --file-hash mac_x86 a8afcd5a55d4499d1df27cba910102ec0413d9a6 --file-hash win_x86 253e3ed5fc292205d1953f78c52a72e1d42b9a18 --file-hash linux_x86 ad59800b550fa1c5d0bac15774a82ed78a510827 --save-downloads-dir src/native_client_sdk/src/build_tools/toolchain_archives --keep
-    # execut it again manuallly.  
+
+execut it again manuallly.  
+
     $ /usr/bin/python src/build/download_nacl_toolchains.py --no-arm-trusted --optional-pnacl --pnacl-version 8097 --file-hash pnacl_linux_x86_32 e368da00aa7fd5f1958f8e817c8928df7da70bee --file-hash pnacl_linux_x86_64 8d76fec06ff9975ace6bbbfd01f3ba729c4b9a75 --file-hash pnacl_translator f9e28462709580ad7333d65c65dc56e40ed8752b --file-hash pnacl_mac_x86_32 4b7e08c62431459244a9e32fc1551918ee96cf34 --x86-version 8097 --file-hash mac_x86_newlib d0a34734e0356d2fd611ab781c05ee994dec9b5e --file-hash win_x86_newlib 6ed8ac51f53cb15328165ff1143d9611c40fc5d8 --file-hash linux_x86_newlib 569cfaa5820f18cfe179e5dcb9ef9e03b7d5cff9 --file-hash mac_x86 a8afcd5a55d4499d1df27cba910102ec0413d9a6 --file-hash win_x86 253e3ed5fc292205d1953f78c52a72e1d42b9a18 --file-hash linux_x86 ad59800b550fa1c5d0bac15774a82ed78a510827 --save-downloads-dir src/native_client_sdk/src/build_tools/toolchain_archives --keep
+    ~/svn/chromium/src$ cd src
+    ~/svn/chromium/src$ ./build/gyp_chromium -Dchromeos=0
+    ~/svn/chromium/src$ make -j2 BUILDTYPE=Release chrome
