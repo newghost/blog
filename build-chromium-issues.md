@@ -383,4 +383,5 @@ Sync and rebuild
     #remove the chromium, and recreate the .gclient
     #chromium 18.0.1025.151, build number 130497
     ~/svn/chromium$ gclient sync --revision src@130497
+    #need to resync because few errors.
 
