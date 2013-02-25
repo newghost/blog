@@ -380,8 +380,8 @@ trying to
 
 Sync and rebuild
 
-    #very old version
-    ~/svn/chromium/src$ gclient sync --revision src@108895
+    #chromium 18.0.1025.151, build number 130497
+    ~/svn/chromium$ gclient sync --revision src@130497
     
 
 
