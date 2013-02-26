@@ -3,45 +3,55 @@ Ubuntu 软件安装
 安装： LAMP Drupal Ubuntu Help 等
 
 Apache + PHP
+
     sudo apt-get install apache2
     sudo apt-get install php5
     sudo gedit /var/www/test.php
 
 MySQL
+
     sudo apt-get install mysql-server
     sudo apt-get install mysq-admin
 
 PHP for MySQL
+
     sudo apt-get install libapache2-mod-auth-mysql
     sudo apt-get install php5-mysql
     sudo gedit /etc/php5/apache2/php.ini
     #最大上传文件：post_max_size = 1024M
 
 PHP My admin
+
     sudo apt-get install phpmyadmin
     sudo ln -s /usr/share/phpmyadmin /var/www/
 
 重启Apache
+
     sudo /etc/init.d/apache2 start
     sudo /etc/init.d/apache2 restart
 
 Drupal
+
     sudo apt-get install drupal6
 
 中文输入
+
     sudo add-apt-repository ppa:shawn-p-huang/ppa
     sudo apt-get update
     sudo apt-get install ibus-gtk
     sudo apt-get install ibus-table-wubi
-    Skype无法输入中文
-    http://www.it165.net/os/html/201210/3607.html
-    极点五点
+
+    # [Skype无法输入中文](http://www.it165.net/os/html/201210/3607.html)
+
+极点五点
+
     sudo wget http://www.xiit.cn/wp-content/uploads/2011/03/vissible-ibus.tar.gz
     tar -zxvf vissible-ibus.tar.gz
     sudo cp vissible.db /usr/share/ibus-table/tables
     sudo cp vissible.gif /usr/share/ibus-table/icons
-    重启iBus -> 添加 visible
-    访问共享目录  
+    #重启iBus -> 添加 visible
+
+访问共享目录  
     sudo mkdir /mnt/zliang-pc
     sudo mount //192.168.1.66/www /www/ -o username="myusername",password="mypassword",dmask=777,fmask=777
     ln -sf /www /home/kris/Desktop
