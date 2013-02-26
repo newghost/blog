@@ -128,6 +128,14 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
     sudo apt-get install nmap
     nmap -O 192.168.1.1-255 | grep "Running: " | sort | uniq -c
 
+压缩目录
+
+    -z: Compress archive using gzip program
+    -c: Create archive
+    -v: Verbose i.e display progress while creating archive
+    -f: Archive File name    
+
+    $ tar -zcvf lib.gz /lib
 
 Debian:
 ====
