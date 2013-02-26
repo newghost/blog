@@ -1,3 +1,3 @@
-This is a blog.
+Log sth.
 ====
 
