@@ -8,6 +8,15 @@ Apache + PHP
     sudo apt-get install php5
     sudo gedit /var/www/test.php
 
+手动安装Apache2
+
+    #解压from http://httpd.apache.org/download.cgi#apache22
+    sudo mkdir /etc/apache2
+    ./configure --prefix=/etc/apache2
+    make
+    sudo make install
+    cd /etc/apache2/bin
+
 MySQL
 
     sudo apt-get install mysql-server
