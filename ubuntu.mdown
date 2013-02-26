@@ -1,0 +1,225 @@
+安装： LAMP Drupal Ubuntu Help 等
+
+--Ubuntu 教程：  http://wiki.ubuntu.com.cn/Apache
+--Apache + PHP
+    sudo apt-get install apache2
+    sudo apt-get install php5
+    sudo gedit /var/www/test.php
+--MySQL
+    sudo apt-get install mysql-server
+    sudo apt-get install mysq-admin
+    PHP for MySQL
+    sudo apt-get install libapache2-mod-auth-mysql
+    sudo apt-get install php5-mysql
+    sudo gedit /etc/php5/apache2/php.ini
+    最大上传文件：post_max_size = 1024M
+    PHP My admin
+    sudo apt-get install phpmyadmin
+    sudo ln -s /usr/share/phpmyadmin /var/www/
+    重启Apache
+    sudo /etc/init.d/apache2 start
+    sudo /etc/init.d/apache2 restart
+    Drupal
+    sudo apt-get install drupal6
+    中文输入
+    sudo add-apt-repository ppa:shawn-p-huang/ppa
+    sudo apt-get update
+    sudo apt-get install ibus-gtk
+    sudo apt-get install ibus-table-wubi
+    Skype无法输入中文
+    http://www.it165.net/os/html/201210/3607.html
+    极点五点
+    sudo wget http://www.xiit.cn/wp-content/uploads/2011/03/vissible-ibus.tar.gz
+    tar -zxvf vissible-ibus.tar.gz
+    sudo cp vissible.db /usr/share/ibus-table/tables
+    sudo cp vissible.gif /usr/share/ibus-table/icons
+    重启iBus -> 添加 visible
+    访问共享目录  
+    sudo mkdir /mnt/zliang-pc
+    sudo mount //192.168.1.66/www /www/ -o username="myusername",password="mypassword",dmask=777,fmask=777
+    ln -sf /www /home/kris/Desktop
+    sleep 20
+    先要保证共享的目录存在，且密码最好不得含有（等特殊字符
+    远程桌面:
+    Ubuntu access Windows: Applications -> Internet  -> Terminal Server Client
+    远程连接Windows
+    sudo apt-get install rdesktop
+    rdesktop -f -a 16 ipaddress
+    远程连接时自动登录服务器:
+    http://www.liberiangeek.net/2012/03/automatically-login-to-ubuntu-12-04-precise-pangolin/
+    sudo gedit /etc/lightdm/lightdm.conf
+    autologin-user=pduweb
+    autologin-user-timeout=0
+    Win7 & Ubuntu 双系统安装：
+    http://wenku.baidu.com/view/bad8fe01e87101f69e3195a6.html
+    Zend PHP Server:
+    1) Zend Server CE，  安装教程
+    2) 头部乱码：D:\Program Files\Zend\ZendServer\etc\ZendEnablerConf.xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    更改Host文件:
+    ubuntu:  sudo gedit /etc/hosts
+    windows: C:\windows\System32\Drivers\Etc
+    增加读写权限：sudo chmod -R a+w /var/www/magento/var
+    Apache:
+    conf\httpd.conf:  默认目录 DocumentRoot、Directory
+    url rewrite: reference 1  不起作用！！Win7下没调试好： 参考1 参考2
+    htaccess 生成工具： http://www.wangqu.org/htaccess/
+    Node: 安装: 教程 
+    工具: http://www.sublimetext.com/2 http://wowubuntu.com/gmate-gedit-textmate.html
+    Magento安装：
+    安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread&tid=102
+    modules: 
+    sudo apt-get install php5-mcrypt
+    sudo apt-get install php5-curl
+    sudo apt-get install php5-gd
+    Apache Multi Domain: VirtualHost, Running several name-based web sites on a single IP address :  http://httpd.apache.org/docs/2.0/vhosts/examples.html
+    Node Shell:  #!/usr/bin/env node
+    解压gzip(.gz)文件：tar xzvf gzip.zip
+    编缉环境变量
+    $HOME/.bashrc
+    扫描网络计算机
+    sudo apt-get install nmap
+    nmap -O 192.168.1.1-255 | grep "Running: " | sort | uniq -c
+
+
+Debian:
+
+    后台执行脚本且无输出（nohup）：nohup ./enlogic.sh &
+    查看后台任务：jobs
+    将后来任务切到前台： fg
+    将前台任务切到后台： bg
+
+
+Svn:  安装教程： Help:  http://svnbook.red-bean.com/en/1.7/index.html
+
+    安装：       sudo apt-get install subversion
+                    sudo apt-get install libapache2-svn
+    设置权限：sudo addgroup subversion    sudo usermod -G subversion -a www-data
+    创建目录： sudo mkdir /home/svn
+    添加权限： sudo chown cris /home/svn  #改变目录所有人
+    签出SVN： svn co http://svn/shopping-tools shopping-tools
+    更新SVN： svn update
+    签入SVN： svn commit -m path-to-commit  'comments'
+    添加SVN： svn add filepath
+    CleanUp： svn cleanup
+    杳看日志： svn lgo path
+    获取最新版本号：  svn info |grep Revision: | cut -c11-
+    获取指定版本： svn update --revision 550
+    清理目录： svn cleanup
+
+
+
+Rabbits SVN:
+
+    自动安装：http://wiki.rabbitvcs.org/wiki/install/ubuntu
+    添加Res: sudo add-apt-repository ppa:rabbitvcs/ppa
+    更新Res: sudo apt-get update
+    And install it with:  sudo apt-get install «packages»
+    rabbitvcs-nautilus3 for the Nautilus 3.x extension 
+    rabbitvcs-nautilus for the Nautilus 2.x extension
+    rabbitvcs-thunar for the Thunar extensions
+    rabbitvcs-gedit for the GEdit extension
+    rabbitvcs-cli for the command line launchers
+    重新启动即可
+
+
+
+Git:
+
+    安装:
+    sudo apt-get -y install git-core
+    直接Clone, git://github.com 似乎不可用:
+    git clone https://github.com/newghost/combine-node.git
+    以管理员身份:
+    git clone git@github.com:newghost/combine-node.git
+    GitClient for Ubuntu: Optional Rabbits
+    http://tortoisehg.bitbucket.org/download/index.html
+    Git Commit / Push
+    提交请求： git commit -m 'first commit'
+    Push请求：git push origin master
+    Git Update / Sync
+    Fetch: git fetch origin master
+    Reset: git reset --hard origin/master
+
+
+
+Java:
+
+    手动安装: http://java.com/en/download/help/linux_install.xml
+    download latest jre/jdk
+    sudo tar zxvf jre-7u9-linux-i586.tar.gz
+    自动安装: sudo apt-get install default-jre
+
+
+
+Sublime:
+
+    Install:  ( 安装到了/usr/bin 目录下）
+    sudo add-apt-repository ppa:webupd8team/sublime-text-2
+    sudo apt-get update
+    sudo apt-get install sublime-text-2-beta 或 sudo apt-get install sublime-text-2-dev
+    Run in Terminal:
+    sublime-text   /  sublime-text-2
+    Install Sublime 2 from binary: Detail
+
+
+vm: 
+
+    ESC (Ctrl + C)： 进入命令行模式
+    命令:
+    :q  退出
+    :w  退出不保存
+    :x   退出并保存
+     
+
+
+
+Node 安装调试
+
+    下载最新的binary文件
+    解压文件
+    方法1 Copy 到 /user/ 目录下, 先切到安装目录下， 然后：
+    循环拷贝所有文件到目标目录
+    sudo cp ./* /usr/ -r
+    方法2 改变环境变量
+    编绎Node， 需要安装
+    For G++:      sudo apt-get install build-essential
+    For Dtrace:   sudo apt-get install systemtap-sdt-dev
+    编绎NodeJS for Debian:
+    https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+
+ 
+
+MySQL :
+
+    数据导入导出：
+    mysql -h localhost -u root -p temp</home/pt/test.sql
+    mysqldump –opt 库名 < c:\data.sql
+    mysqldump -h localhost -u root -p123456 zf
+    mysqlimport -h localhost -u root -p123456 < c:\data.sql
+
+
+PHP :
+
+    变量输出：date(),  Today is Tue
+    <?php
+    $myTxt = "Today is";
+    echo $myTxt." ".date("D");
+    ?>
+    数组使用： count()
+    <?php
+    $navs = array(
+      array("txt"=>"Home", "url"=>"home.html"),
+      array("txt"=>"About Us", "url"=>"about-us.html"),  
+      array("txt"=>"Articles", "url"=>"articles.html"),
+      array("txt"=>"Contact Us", "url"=>"contact-us.html"),
+      array("txt"=>"Site Map", "url"=>"sitemap.html")
+    );
+    ?>
+    <ul class="site-nav">
+    <?php
+    for($i=0;$i<count($navs);$i++){
+      echo '<li><a href="'.$navs[$i]["url"].'">'.$navs[$i]["txt"].'</a></li>';
+    }
+    ?>
+    </ul>
