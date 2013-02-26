@@ -1,27 +1,34 @@
+Ubuntu 软件安装
+====
 安装： LAMP Drupal Ubuntu Help 等
 
---Ubuntu 教程：  http://wiki.ubuntu.com.cn/Apache
---Apache + PHP
+Apache + PHP
     sudo apt-get install apache2
     sudo apt-get install php5
     sudo gedit /var/www/test.php
---MySQL
+
+MySQL
     sudo apt-get install mysql-server
     sudo apt-get install mysq-admin
-    PHP for MySQL
+
+PHP for MySQL
     sudo apt-get install libapache2-mod-auth-mysql
     sudo apt-get install php5-mysql
     sudo gedit /etc/php5/apache2/php.ini
-    最大上传文件：post_max_size = 1024M
-    PHP My admin
+    #最大上传文件：post_max_size = 1024M
+
+PHP My admin
     sudo apt-get install phpmyadmin
     sudo ln -s /usr/share/phpmyadmin /var/www/
-    重启Apache
+
+重启Apache
     sudo /etc/init.d/apache2 start
     sudo /etc/init.d/apache2 restart
-    Drupal
+
+Drupal
     sudo apt-get install drupal6
-    中文输入
+
+中文输入
     sudo add-apt-repository ppa:shawn-p-huang/ppa
     sudo apt-get update
     sudo apt-get install ibus-gtk
