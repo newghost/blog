@@ -16,6 +16,8 @@ Apache + PHP
     make
     sudo make install
     cd /etc/apache2/bin
+    sudo /etc/apache2/bin/apachectl -f /etc/apache2/conf/httpd.conf   #Start
+    sudo kill -TERM `cat /etc/apache2/logs/httpd.pid`                 #Stop
 
 MySQL
 
