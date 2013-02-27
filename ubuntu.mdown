@@ -130,6 +130,19 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
     sudo apt-get install nmap
     nmap -O 192.168.1.1-255 | grep "Running: " | sort | uniq -c
 
+搜索文件内容
+    
+    #搜索当前目录下的所有包含 “List all PDUs" 的文件
+    grep -rn List\ all\ PDUs ./*
+
+    -i, --ignore-case
+    -n, --line-number
+    -c, --count
+    -r, --recursive
+    -v, --invert-match
+    -E, --extended-regexp
+    -e PATTERN, --regexp=PATTERN
+
 压缩目录
 
     -z: Compress archive using gzip program
