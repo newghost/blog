@@ -16,7 +16,9 @@ Ubuntu 软件安装
     make
     sudo make install
     cd /etc/apache2/bin
-    sudo /etc/apache2/bin/apachectl -f /etc/apache2/conf/httpd.conf   #Start
+    #start 启动服务
+    sudo /etc/apache2/bin/apachectl -f /etc/apache2/conf/httpd.conf
+    #stop  关闭服务
     sudo kill -TERM `cat /etc/apache2/logs/httpd.pid`                 #Stop
 
 手动安装: PHP5
