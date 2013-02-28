@@ -125,7 +125,7 @@ Win/Desktop JavaScript
 
 3. JavaScript for ARM
 ====
-PandorBox
+Pandaboard
 ----
 * [Open source hardware](http://pandaboard.org/)
 * Dual-core 1.2 GHz CPU and 384 MHz GPU.
