@@ -16,15 +16,15 @@ Ubuntu 软件安装
 手动安装: Apache2
 
     #unzip from http://httpd.apache.org/download.cgi#apache22
-    sudo mkdir /etc/apache2
-    ./configure --prefix=/etc/apache2
+    sudo mkdir /etc/apache
+    ./configure --prefix=/etc/apache
     make
     sudo make install
-    cd /etc/apache2/bin
+    cd /etc/apache/bin
     #start 启动服务
-    sudo /etc/apache2/bin/apachectl -f /etc/apache2/conf/httpd.conf
+    sudo /etc/apache/bin/apachectl -f /etc/apache/conf/httpd.conf
     #stop  关闭服务
-    sudo kill -TERM `cat /etc/apache2/logs/httpd.pid`                 #Stop
+    sudo kill -TERM `cat /etc/apache/logs/httpd.pid`
 
 手动安装: PHP5
 
@@ -175,7 +175,7 @@ Debian:
 Svn安装教程： [Help](http://svnbook.red-bean.com/en/1.7/index.html)
 
     安装：       sudo apt-get install subversion
-                    sudo apt-get install libapache2-svn
+                 sudo apt-get install libapache2-svn
     设置权限： sudo addgroup subversion    sudo usermod -G subversion -a www-data
     创建目录： sudo mkdir /home/svn
     添加权限： sudo chown cris /home/svn  #改变目录所有人
