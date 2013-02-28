@@ -8,6 +8,11 @@ Ubuntu 软件安装
     sudo apt-get install php5
     sudo gedit /var/www/test.php
 
+开机自动启动脚本: auto start shell
+
+    1. Without login:   /etc/rc[N].d/...
+    2. After login:     ~/.bashrc
+
 手动安装: Apache2
 
     #unzip from http://httpd.apache.org/download.cgi#apache22
