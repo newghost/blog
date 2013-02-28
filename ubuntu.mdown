@@ -228,13 +228,7 @@ Java:
 
 Sublime:
 
-    Install:  ( 安装到了/usr/bin 目录下）
-    sudo add-apt-repository ppa:webupd8team/sublime-text-2
-    sudo apt-get update
-    sudo apt-get install sublime-text-2-beta 或 sudo apt-get install sublime-text-2-dev
-    Run in Terminal:
-    sublime-text   /  sublime-text-2
-    Install Sublime 2 from binary: Detail
+    Install Sublime 2 from binary: [Detail](http://www.technoreply.com/how-to-install-sublime-text-2-on-ubuntu-12-04-unity/)
 
 
 vm: 
