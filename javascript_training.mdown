@@ -131,6 +131,7 @@ PandorBox
 * Dual-core 1.2 GHz CPU and 384 MHz GPU.
 * SD Card (up to 32 GB), USB2.0.
 * Wireless Ethernet and Bluetooth connectivity.
+* Firefox OS supported.
 
 Raspberry Pi
 ----
@@ -138,7 +139,7 @@ Raspberry Pi
 * Low cost 25$
 * Applications: 
 https://github.com/search?q=raspberry&type=Repositories&ref=searchresults
-* NodeJS on Armv6
+* NodeJS supported (Armv6)
 
 Arduino
 ----
