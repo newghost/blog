@@ -71,6 +71,10 @@ Drupal
 
     # [Skype无法输入中文](http://www.it165.net/os/html/201210/3607.html)
 
+Shell
+
+    #!/bin/sh 
+
 极点五点
 
     sudo wget http://www.xiit.cn/wp-content/uploads/2011/03/vissible-ibus.tar.gz
