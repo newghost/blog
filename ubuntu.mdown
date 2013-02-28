@@ -32,7 +32,7 @@ Ubuntu 软件安装
     #unzip from php.net/downloads.php
     cd ~/Downloads/php-5.4.12
     sudo mkdir /etc/php5
-    ./configure --prefix=/etc/php5 --with-apxs2=/etc/apache2/bin/apxs
+    ./configure --prefix=/etc/php5 --with-apxs2=/etc/apache/bin/apxs
     make 
     sudo make install
 
