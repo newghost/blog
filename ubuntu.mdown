@@ -226,9 +226,8 @@ Java:
     sudo tar zxvf jre-7u9-linux-i586.tar.gz
     自动安装: sudo apt-get install default-jre
 
-Sublime:
-
-    Install Sublime 2 from binary: [Detail](http://www.technoreply.com/how-to-install-sublime-text-2-on-ubuntu-12-04-unity/)
+Sublime: Install Sublime 2 from 
+binary: [Detail](http://www.technoreply.com/how-to-install-sublime-text-2-on-ubuntu-12-04-unity/)
 
 
 vm: 
