@@ -128,6 +128,9 @@ Win/Desktop JavaScript
 PandorBox
 ----
 * [Open source hardware](http://pandaboard.org/)
+* Dual-core 1.2 GHz CPU and 384 MHz GPU.
+* SD Card (up to 32 GB), USB2.0.
+* Wireless Ethernet and Bluetooth connectivity.
 
 Raspberry Pi
 ----
@@ -139,7 +142,7 @@ https://github.com/search?q=raspberry&type=Repositories&ref=searchresults
 
 Arduino
 ----
-* GNU hardware
+* [Open source hardware](http://www.arduino.cc/)
 
 JavaScript
 ====
