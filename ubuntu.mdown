@@ -13,6 +13,16 @@ Ubuntu 软件安装
     1. Without login:   /etc/rc[N].d/...
     2. After login:     ~/.bashrc
 
+将某个脚本设置为可执行，并随机自动运行
+
+    sudo chmod -R  777  /etc/apache/start.sh
+    sudo ln -s /etc/apache/start.sh /etc/rc0.d/apachestart.sh
+
+    #Permission    
+    read: 4, write: 2, execute: 1
+    owner, group other
+
+
 手动安装: Apache2
 
     #unzip from http://httpd.apache.org/download.cgi#apache22
