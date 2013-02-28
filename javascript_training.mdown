@@ -336,6 +336,24 @@ sleep, delay, timer
 5. Web Build System
 ====
 
+Combine
+----
+
+CSS Auto Sprites
+----
+
+Minify (HTML/CSS/JS)
+----
+
+Compress (deploy gzipped files)
+----
+
+Others
+----
+- Debug mode (auto combine & css sprites)
+- Deploy (only 1 png, 1 js file, 1 css file deployed)
+- Client cache (server-side 304 enabled).
+- Version update.
 
 
 6. Practices
