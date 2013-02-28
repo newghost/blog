@@ -1,0 +1,393 @@
+1. Start
+====
+Here we are introducing some implement scenario and important features of JavaScript.
+
+
+General
+====
+JavaScript made its first appearance in Netscape 2.0 in 1995 with a name Live Script.
+
+
+Overview
+----
+* Long history 
+JavaScript made its first appearance in Netscape 2.0 in 1995 with a name Live Script.
+
+* Widely used
+Now, it’s the most populate programming language on Github: 
+https://github.com/languages
+
+* Performance
+LinkedIn Mobile Moved from Rails to Node: 27 Servers Cut and Up to 20x Faster 
+http://highscalability.com/blog/2012/10/4/linkedin-moved-from-rails-to-node-27-servers-cut-and-up-to-2.html
+
+* Simple
+With only 25 keywoards
+http://www.csdn.net/article/2012-06-11/2806543
+
+* Productivity: Many open source projects and frameworks.
+http://www.ibm.com/developerworks/cn/web/wa-jsframeworks/
+
+
+Features
+====
+
+Key Features
+----
+* JavaScript doesn't have any multithreading or multiprocessing capabilities.
+* JavaScript is event driven.
+* JavaScript vs. Ruby (CoffeeScript) http://coffeescript.org/
+
+
+
+
+2. Implementations
+====
+
+Client-Side JavaScript
+----
+Client-side JavaScript is the most common form of the language. The script should be included in or referenced by an HTML document for the code to be interpreted by the browser.
+It means that a web page need no longer be static HTML, but can include programs that interact with the user, control the browser, and dynamically create HTML content.
+
+* Ajax:
+Get data without refresh the who pages.
+
+* Files:
+Client-side JavaScript does not allow the reading or writing of files. This has been kept for security reason.
+
+* HTML5: [Demos](http://html5demos.com/)
+    - Web Storage/ Web SQL/ Web Worker/ CORS (cross-domain Ajax)
+    - Web GL
+    - Web Socket
+    - Animation: (CSS3)
+    - Video/ Audio/ File Access
+* How to debug:
+    - Chrome (webkit same as safari)
+    Right Click -> Inspect Element -> Console, print: console.log(“hello javascript”)
+    - Firefox
+    Install addon firebug
+
+
+
+Server-Side JavaScript
+----
+* What is Node.js?
+http://en.wikipedia.org/wiki/Nodejs
+
+* Why Node.js?
+
+* Shortage:
+http://developer.51cto.com/art/201205/339238.htm
+
+* Install and debug Node.js:
+
+Project url: http://www.nodejs.org/
+Execute from console:
+
+    $ node
+    > console.log("ok")
+    ok
+    > Ctrol + C
+
+Execute from file:
+
+    $ node hello.js
+
+Execute from shell file: ( Need cgwin on windows)
+
+    #!/usr/bin/env node
+
+    var child_process = require("child_process"),
+        fs            = require("fs");
+
+    console.log("hello js");
+
+Win/Desktop JavaScript
+----
+
+* Node-webkit:  
+    - Source: https://github.com/rogerwang/node-webkit
+    - Arm in [process](https://github.com/rogerwang/node-webkit/issues/193), not supported yet
+    - Ohters: QT5, [AppJS](http://appjs.org)
+    - [JavaScript Now The First-Class Language for GNOME App Development](http://treitter.livejournal.com/14871.html?utm_source=javascriptweekly&utm_medium=email)
+    - [Win8 applications](http://readwrite.com/2013/01/07/will-windows-8-bring-html5-to-enterprise-applications),
+        [Sample](http://msdn.microsoft.com/en-us/library/windows/apps/hh974582.aspx)
+
+* Native JavaScript
+    - Chrome OS:  http://baike.baidu.com/view/2627636.htm?fromId=2616234
+    - Native Client: https://developers.google.com/native-client/sdk/download
+    - Firefox OS: 
+
+        Why? http://www.zfanw.com/blog/firefox-os.html
+
+        API: https://wiki.mozilla.org/WebAPI#API
+
+
+3. JavaScript for ARM
+====
+
+Raspberry Pi
+----
+* GNU hardware
+http://www.raspberrypi.org/
+* Low cost 25$
+* Applications: 
+https://github.com/search?q=raspberry&type=Repositories&ref=searchresults
+* NodeJS on Armv6
+
+Arduino
+----
+* GNU hardware
+
+PandorBox
+----
+
+
+JavaScript
+====
+
+
+ECMAScript
+----
+
+* ECMAScript: http://www.w3school.com.cn/js
+
+* JavaScript for Web: 
+    - Basic:
+    http://www.w3school.com.cn/js/index.asp
+    - jQuery:
+    http://www.w3school.com.cn/jquery/index.asp
+    - CSS:
+    http://www.w3school.com.cn/css/
+
+* API for NodeJS: http://www.nodejs.org/api/
+
+* Advance:
+    - Object:
+    http://www.cnblogs.com/Kevin-moon/archive/2008/10/23/1313111.html
+    - Design pattern:
+    https://github.com/shichuan/javascript-patterns
+
+
+4. Useage
+===
+
+Boolean logic
+----
+    var EL = EL || {};
+
+    EL && (EL.envoke = function(){
+        console.log("method");
+    });
+
+    EL && EL.envoke && EL.envoke();
+
+length
+----
+    for (var i = 0, l = files.length; i < l; i++) {
+      var full = path.join(root, files[i]);
+      console.log(full);
+    }
+
+closure
+----
+Namespace
+
+    var Namespace;
+
+    Namespace = (function() {
+
+        var privateMethod = function() {
+            console.log("private method");
+        };
+
+        var publicMethod = function() {
+            console.log("public method");
+        };
+
+        return {
+            publicMethod: publicMethod
+        }
+    })();
+
+Persistent
+
+    var path = require("path");
+    var filename = "filename";
+
+    for (var idx = 0; idx < 10; idx++) {
+
+      (function(idx) {
+        var filePath = path.join(filename, idx);
+
+        fs.stat(filePath, function(err, stat) {
+            console.log(err || filePath || stat);
+        });
+      })(idx);
+    }
+
+
+this
+----
+Reference: [More](http://www.quirksmode.org/js/this.html)
+
+    var Obj = {
+      method1: function() {
+        this.version = 2;
+      }
+    };
+
+    Obj.method1();
+
+    console.log(Obj.method1.version);
+    console.log(Obj.version);
+
+    var Method = function(version) {
+      this.version = version;
+    };
+
+    var method1 = new Method(3),
+        method2 = new Method(4);
+
+    console.log(method1.version, method2.version);
+
+function chain
+----
+    var $container
+        .show()
+        .addClass();
+
+    var show = function() {
+        var self = this;
+
+        return self;
+    }
+
+inheritance
+----
+Function.prototype:
+
+    function Greeter(name) {
+      this.name = name || 'John Doe';
+    }
+
+    Greeter.prototype.hello = function hello() {
+      return 'Hello, my name is ' + this.name;
+    }
+
+    var george = new Greeter('George');
+
+Object.create
+
+    var proto = {
+      hello: function hello(guest) {
+        console.log('Hello ', guest, ', greeting from', this.name);
+      }
+    };
+
+    var george = Object.create(proto);
+    george.name = 'George';
+
+Array: [API](http://www.w3schools.com/jsref/jsref_obj_array.asp)
+
+    var arr = [1, 2, 3, 4, true, 1.0];
+    console.log(arr.indexOf(3));
+    arr.forEach(function(val, idx) { console.log(val, idx) });
+
+[scope chain](http://dailyjs.com/2012/06/25/this-binding/)
+----
+    var delegateObj  = { name: "Chirs" },
+        delegateFunc = proto.hello;
+
+    delegateFunc.call(delegate,  "nobody!");
+    delegateFunc.apply(delegate, ["nobody!"]);
+
+overwrite
+----
+arguments & constructor
+
+    var log = function() {
+      Array.prototype.forEach.call(arguments, function(arg) {
+        console.log("constructor:",  arg.constructor);
+        console.log("prototype:",    arg.prototype);
+      });
+    };
+
+    log(true, 1, 1.0, "1", /a/, [], {}, log, fs);
+
+sleep, delay, timer
+----
+
+    var t1 = setInterval(function() {
+      console.log(new Date());
+    }, 1000);
+
+    var t2 = setTimeout(function() {
+      console.log("clear timer");
+
+      clearInterval(t1);
+      clearTimeout(t2);
+
+    }, 10000);
+
+
+5. Web Build System
+====
+
+
+
+6. Practices
+====
+
+Monitor
+----
+Server reachbility
+
+    var net = require('net');
+
+    var cmds = [
+        "NOOP"
+      , "HELO Enlogic"
+      , "MAIL FROM:<kris.zhang@enlogic.com>"
+      , "RCPT TO:<kris.zhang@enlogic.com>"
+      , "RCPT TO:<c2u@live.cn>"
+      , "DATA"
+      , "DATE:2006-6-1 22:11:01"
+      , "FROM:kris.zhang@enlogic.com"
+      , "TO:kris.zhang@enlogic.com, justin.luo@enlogic.com"
+      , "SUBJECT:Test"
+      , "REPLY-TO:kris.zhang@sina.com"
+      , ""
+      , "This is a test mail send by SMTP"
+      , "\r\n."
+      , "QUIT"
+    ];
+
+    var client = net.connect({host:"192.168.1.4", port:25}, function() {
+      for (var i = 0, l = cmds.length; i < l; i++) {
+        (function(i){
+          setTimeout(function() {
+            console.log(cmds[i]);
+            client.write(cmds[i] + "\r\n");
+          }, i * 6000);
+        })(i);
+      }
+    });
+
+    client.on('data', function(data) { console.log(data.toString()); });
+    client.on('end', function() { console.log('client disconnected'); });
+
+Scanner
+----
+
+
+
+BuildBot
+----
+- [reference](https://chromium-build.appspot.com/p/chromium/console)
+- Start server build
+- Mark gold
+
+Bugger
+----
+Tract bugs
