@@ -23,6 +23,7 @@ Ubuntu 软件安装
 
 手动安装: PHP5
 
+    # require package: libxml2-dev
     #unzip from php.net/downloads.php
     cd ~/Downloads/php-5.4.12
     sudo mkdir /etc/php5
