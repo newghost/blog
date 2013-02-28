@@ -98,7 +98,7 @@ Drupal
 
 Win7 & Ubuntu 双系统安装：http://wenku.baidu.com/view/bad8fe01e87101f69e3195a6.html
 
-umount device:
+Umount Device:
 
     sudo umount -l /isodevice
 
