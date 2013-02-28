@@ -125,11 +125,13 @@ Win/Desktop JavaScript
 
 3. JavaScript for ARM
 ====
+PandorBox
+----
+* [Open source hardware](http://pandaboard.org/)
 
 Raspberry Pi
 ----
-* GNU hardware
-http://www.raspberrypi.org/
+* [Arm11 based](http://www.raspberrypi.org/)
 * Low cost 25$
 * Applications: 
 https://github.com/search?q=raspberry&type=Repositories&ref=searchresults
@@ -138,10 +140,6 @@ https://github.com/search?q=raspberry&type=Repositories&ref=searchresults
 Arduino
 ----
 * GNU hardware
-
-PandorBox
-----
-
 
 JavaScript
 ====
