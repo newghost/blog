@@ -361,7 +361,7 @@ Others
 
 Monitor
 ----
-Server reachbility
+Server reachbility, please do optimize.
 
     var net = require('net');
 
