@@ -355,7 +355,7 @@ Advantage
     - js: less keywords more simple than C#/AS/Java, one thread, no blocking, event driving.
     - css: open standard, well supportted.
 
-Web Build System
+Build
 ----
 
 - Combine
@@ -371,8 +371,20 @@ Web Build System
 Basic
 ====
 
-
-
+prototype method
+----
+    
+    <html>
+        <head>
+            <style> #mydiv { width: 400px; height: 300px } </style>
+        </head>
+        <body>
+            <div id="mydiv"></div>
+        </body>
+        <script>
+            document.getElementById("mydiv").innHTML = "Hello, JavaScript";
+        </script>
+    </html>
 
 
 
