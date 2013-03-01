@@ -386,4 +386,10 @@ Sync and rebuild Version 20.0.1091.0 (130497)
     ~/svn/chromium130497/src$ ./build/gyp_chromium -Dchromeos=0
     ~/svn/chromium130497/src$ make -j2 BUILDTYPE=Release chrome
 
+Sucess on x86, but still failed when make cross compile for ARM,
+trying to
+
+  1. check rootfs, caused by soft links?
+  2. Using another rootfs, will try Linaro first.
+  3. Cross building tool chain is not configured properly, try another configuration?
 
