@@ -145,7 +145,7 @@ Arduino
 ----
 * [Open source hardware](http://www.arduino.cc/)
 
-JavaScript
+4. JavaScript
 ====
 
 
@@ -171,7 +171,7 @@ ECMAScript
     https://github.com/shichuan/javascript-patterns
 
 
-4. Useage
+Basic
 ===
 
 Boolean logic
@@ -333,27 +333,47 @@ sleep, delay, timer
     }, 10000);
 
 
-5. Web Build System
+5. Web Develop
 ====
 
-Combine
+Overview
 ----
 
-CSS Auto Sprites
-----
-
-Minify (HTML/CSS/JS)
-----
-
-Compress (deploy gzipped files)
-----
+Framework
+- html (framework, template, model?)
+- CSS (view)
+- JavaScript (controler)
 
 Others
+- WPF: XAML(html），Style(css), C#(JS)
+- Flex: MXML(html), Style(css), ActionScript(JS)
+- Android App: Samiliar
+
+Advantage
+- Free, Simple, Open
+    - html: xml without schemas is more simple.
+    - js: less keywords more simple than C#/AS/Java, one thread, no blocking, event driving.
+    - css: open standard, well supportted.
+
+Web Build System
 ----
-- Debug mode (auto combine & css sprites)
-- Deploy (only 1 png, 1 js file, 1 css file deployed)
-- Client cache (server-side 304 enabled).
-- Version update.
+
+- Combine
+- CSS Auto Sprites
+- Minify (HTML/CSS/JS)
+- Compress (deploy gzipped files)
+- Others
+    - Debug mode (auto combine & css sprites)
+    - Deploy (only 1 png, 1 js file, 1 css file deployed)
+    - Client cache (server-side 304 enabled).
+    - Version update.
+
+Basic
+====
+
+
+
+
 
 
 6. Practices
