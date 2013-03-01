@@ -119,9 +119,7 @@ Win/Desktop JavaScript
     - Firefox OS: 
 
         Why? http://www.zfanw.com/blog/firefox-os.html
-
-        API: https://wiki.mozilla.org/WebAPI#API
-
+        API: [WebAPI](https://wiki.mozilla.org/WebAPI#API) [OS API](https://developer.mozilla.org/en-US/docs/Apps/Reference)
 
 3. JavaScript for ARM
 ====
