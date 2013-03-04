@@ -279,7 +279,6 @@ MySQL :
 Tar  [系统备份](http://www.yesure.net/archives/6984.html)
 
     sudo tar -cvpzf /home/kris/backup/03-2.tgz --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys --exclude=/home /
-    sudo tar -cvpzf /home/kris/backup/03-4.tgz --exclude=/lost+found --exclude=/mnt --exclude=/home /
 
 
 Android: [build on device](http://developer.android.com/tools/building/building-eclipse.html)
