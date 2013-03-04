@@ -116,7 +116,9 @@ Shell
     autologin-user=pduweb
     autologin-user-timeout=0
 
-Win7 & Ubuntu 双系统安装：http://wenku.baidu.com/view/bad8fe01e87101f69e3195a6.html
+Win7 & Ubuntu
+    [双系统安装](http://www.360doc.com/content/11/0506/22/6110614_114908124.shtml)
+    [卸载Ubuntu](http://www.linuxidc.com/linux/2010-03/25129.htm)
 
 Umount Device:
 
