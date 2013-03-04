@@ -149,7 +149,9 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
     解压gzip(.gz)文件：tar xzvf gzip.zip
 
 编缉环境变量, etc PATH
+
     $HOME/.bashrc
+    export PATH=$HOME/adt/jre:$PATH
 
 扫描网络计算机
 
