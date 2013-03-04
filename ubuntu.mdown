@@ -151,7 +151,7 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
 编缉环境变量, etc PATH
 
     $HOME/.bashrc
-    export PATH=$HOME/adt/jre:$PATH
+    export PATH=$HOME/adt/eclipse/jre/bin:$PATH
 
 扫描网络计算机
 
