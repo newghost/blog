@@ -51,6 +51,12 @@ MySQL
     sudo apt-get install mysql-server
     sudo apt-get install mysq-admin
 
+Mount device:
+    
+     sudo fdisk -l
+     sudo mount -t ext4 /dev/sda7 /mnt/home
+
+
 PHP for MySQL
 
     sudo apt-get install libapache2-mod-auth-mysql
@@ -281,6 +287,7 @@ MySQL :
 Tar  [系统备份](http://www.yesure.net/archives/6984.html)
 
     sudo tar -cvpzf /home/kris/backup/03-2.tgz --exclude=/proc --exclude=/lost+found --exclude=/mnt --exclude=/sys --exclude=/home /
+    sudo tar -xvpzf /media/gpan/ubuntubak.tgz -C /
 
 
 Android: [build on device](http://developer.android.com/tools/building/building-eclipse.html)
