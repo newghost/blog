@@ -274,3 +274,10 @@ MySQL :
     mysqldump -h localhost -u root -p123456 zf
     mysqlimport -h localhost -u root -p123456 < c:\data.sql
 
+Android: [build on device](http://developer.android.com/tools/building/building-eclipse.html)
+
+    cd ~/adt/sdk/platform-tools
+    adb kill-server
+    #Need root permission to start the server.
+    sudo ./adb devices
+    
