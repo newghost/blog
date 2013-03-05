@@ -11,7 +11,10 @@ Ubuntu 软件安装
 开机自动启动脚本: auto start shell
 
     1. Without login:   /etc/rc[N].d/...
-    2. After login:     ~/.bashrc
+    2. After login:     ~/.bashrc   ~/.profile
+
+    PATH=/usr/local/Trolltech/Qt-4.8.4/bin:$PATH
+    export PATH
 
 将某个脚本设置为可执行，并随机自动运行
 
