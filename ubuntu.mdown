@@ -299,4 +299,6 @@ Android: [build on device](http://developer.android.com/tools/building/building-
     ./adb kill-server
     #Need root permission to start the server.
     sudo ./adb devices
+    #Enter shell command prompt
+    ./adb shell
     
