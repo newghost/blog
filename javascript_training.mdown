@@ -102,7 +102,7 @@ Execute from shell file: ( Need cgwin on windows)
 
     console.log("hello js");
 
-Win/Desktop JavaScript
+Desktop JavaScript
 ----
 The goal is that develope desktop application using web technologies, especially on arm device.
 
