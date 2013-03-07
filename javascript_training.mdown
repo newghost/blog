@@ -128,7 +128,6 @@ The goal is that develope desktop application using web technologies, especially
     - Html5ApplicationViewer: UI
 
       On A10 device, the performance of Html5 Viewer(Qt4) is much more better than  [WebView inner Android application](http://developer.android.com/guide/webapps/webview.html).
-      But the shortage is that, it doesn't support latest HTML5 feature, like CSS3 animation.
 
     - NodeJS Local Server: Backend.
 
