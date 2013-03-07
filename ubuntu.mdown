@@ -189,8 +189,7 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
 
     $ tar -zcvf lib.gz /lib
 
-Debian:
-====
+
 后台执行脚本且无输出（nohup）：nohup ./enlogic.sh &
 
 查看后台任务：jobs
@@ -276,12 +275,11 @@ Node 安装调试
     编绎Node， 需要安装
     For G++:      sudo apt-get install build-essential
     For Dtrace:   sudo apt-get install systemtap-sdt-dev
-    编绎NodeJS for Debian:
-    https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+    [编绎NodeJS for Debian](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 
 MySQL :
 
-    数据导入导出：
+    数据导入导
     mysql -h localhost -u root -p temp</home/pt/test.sql
     mysqldump –opt 库名 < c:\data.sql
     mysqldump -h localhost -u root -p123456 zf
@@ -293,7 +291,9 @@ Tar  [系统备份](http://www.yesure.net/archives/6984.html)
     sudo tar -xvpzf /media/gpan/ubuntubak.tgz -C /
 
 
-Android: [build on device](http://developer.android.com/tools/building/building-eclipse.html)
+Android: 
+====
+[build on device](http://developer.android.com/tools/building/building-eclipse.html)
 
     cd ~/adt/sdk/platform-tools
     ./adb kill-server
@@ -302,3 +302,11 @@ Android: [build on device](http://developer.android.com/tools/building/building-
     #Enter shell command prompt
     ./adb shell
     
+
+
+Debian:
+====
+[startx](http://www.x.org/archive/X11R6.8.1/doc/startx.1.html)
+----
+
+
