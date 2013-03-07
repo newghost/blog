@@ -296,7 +296,7 @@ Tar  [系统备份](http://www.yesure.net/archives/6984.html)
 Android: [build on device](http://developer.android.com/tools/building/building-eclipse.html)
 
     cd ~/adt/sdk/platform-tools
-    adb kill-server
+    ./adb kill-server
     #Need root permission to start the server.
     sudo ./adb devices
     
