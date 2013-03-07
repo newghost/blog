@@ -124,7 +124,6 @@ The goal is that develope desktop application using web technologies, especially
     - The solution is that using chrome OS/firefox os to present the UI, nodejs running at backend, but injection an other thread of Nodejs is too complex on these OS.
 
 * QT + NodeJS
-    - [Tested and verified](http://qt-project.org/wiki/apt-get_Qt4_on_the_Raspberry_Pi).
     - Html5ApplicationViewer: UI
 
       On A10 device, the performance of Html5 Viewer(Qt4) is much more better than  [WebView inner Android application](http://developer.android.com/guide/webapps/webview.html).
@@ -132,6 +131,9 @@ The goal is that develope desktop application using web technologies, especially
     - NodeJS Local Server: Backend.
 
       Handle and response the request from Html5ApplicationViewer(qt application).
+
+    - [Qt4 on rspi](http://qt-project.org/wiki/apt-get_Qt4_on_the_Raspberry_Pi)
+    - [Qtwebkit Bridge](http://qt-project.org/doc/qt-4.8/qtwebkit-bridge.html)
 
 
 3. JavaScript for ARM
