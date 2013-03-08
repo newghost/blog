@@ -306,7 +306,16 @@ Android:
 
 Debian:
 ====
-[startx](http://www.x.org/archive/X11R6.8.1/doc/startx.1.html)
-----
+startx: [initialize an X session](http://www.x.org/archive/X11R6.8.1/doc/startx.1.html)
 
+xinit: [r](http://www.x.org/archive/X11R6.8.1/doc/xinit.1.html)
 
+pcmanfm: [file manager with tabbed browsing](https://wiki.archlinux.org/index.php/PCManFM)
+
+lxtask: Task Manager
+
+lxpanel: [standard panel of LXDE](http://wiki.lxde.org/en/LXPanel)
+
+lxsession: [standard session manager](http://wiki.lxde.org/en/LXSession)
+
+openbox: [window manager with extensive standards support](http://zh.wikipedia.org/zh-cn/Openbox)
