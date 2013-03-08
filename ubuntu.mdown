@@ -8,7 +8,7 @@ Ubuntu 软件安装
     sudo apt-get install php5
     sudo gedit /var/www/test.php
 
-开机自动启动脚本: auto start shell
+开机自动启动脚本: [Making scripts run at boot time with Debia](http://www.debian-administration.org/articles/28)
 
     1. Without login:   /etc/rc[N].d/...
     2. After login:     ~/.bashrc   ~/.profile
