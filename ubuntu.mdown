@@ -306,6 +306,8 @@ Android:
 
 Debian:
 ====
+LXDE: [Lightweight X11 Desktop Environment](http://lxde.org/)
+
 startx: [initialize an X session](http://www.x.org/archive/X11R6.8.1/doc/startx.1.html)
 
 xinit: [r](http://www.x.org/archive/X11R6.8.1/doc/xinit.1.html)
@@ -314,7 +316,11 @@ pcmanfm: [file manager with tabbed browsing](https://wiki.archlinux.org/index.ph
 
 lxtask: Task Manager
 
-lxpanel: [standard panel of LXDE](http://wiki.lxde.org/en/LXPanel)
+lxpanel: 
+- [standard panel of LXDE](http://wiki.lxde.org/en/LXPanel)
+- [removing/hiding lxpanel](http://forums.linuxmint.com/viewtopic.php?f=175&t=82194)
+
+    /etc/xdg/lxsession/LXDE/autostart
 
 lxsession: [standard session manager](http://wiki.lxde.org/en/LXSession)
 
