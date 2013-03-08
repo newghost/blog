@@ -314,6 +314,8 @@ xinit: [r](http://www.x.org/archive/X11R6.8.1/doc/xinit.1.html)
 
 pcmanfm: [file manager with tabbed browsing](https://wiki.archlinux.org/index.php/PCManFM)
 
+xscreensaver: [framework for blanking and locking the screen.](http://en.wikipedia.org/wiki/XScreenSaver)
+
 lxtask: Task Manager
 
 lxpanel: 
