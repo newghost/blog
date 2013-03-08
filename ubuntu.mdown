@@ -291,6 +291,16 @@ Tar  [系统备份](http://www.yesure.net/archives/6984.html)
     sudo tar -xvpzf /media/gpan/ubuntubak.tgz -C /
 
 
+kill process in Linux
+
+    ps aux || grep process_name
+
+Which directory the script file resides?
+
+    BASEDIR=$(dirname $0)
+    echo $BASEDIR
+
+
 Android: 
 ====
 [build on device](http://developer.android.com/tools/building/building-eclipse.html)
