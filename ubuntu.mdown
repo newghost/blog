@@ -311,7 +311,11 @@ Android:
     sudo ./adb devices
     #Enter shell command prompt
     ./adb shell
-    
+
+[WebView]
+
+1. [Custom 404 on Android](http://stackoverflow.com/questions/4101331/editing-or-creating-a-custom-web-page-not-available)
+2. [Custom 404 on iOS](http://stackoverflow.com/questions/4497120/how-to-find-the-404-error-when-i-am-uisng-a-webview-based-application-and-the-se)
 
 
 Debian:
