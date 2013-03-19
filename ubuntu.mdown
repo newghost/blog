@@ -189,6 +189,11 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
 
     $ tar -zcvf lib.gz /lib
 
+[Brightness and Darkness](http://askubuntu.com/questions/3841/desktop-doesnt-remember-brightness-settings-after-a-reboot)
+
+    sudo sublime /etc/rc.local
+    xbacklight -set 80
+
 
 后台执行脚本且无输出（nohup）：nohup ./enlogic.sh &
 
