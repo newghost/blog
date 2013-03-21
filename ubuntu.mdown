@@ -102,6 +102,10 @@ Shell
     sudo cp vissible.gif /usr/share/ibus-table/icons
     #重启iBus -> 添加 visible
 
+自动安装filezilla FTP服务器
+
+    sudo apt-get install filezilla
+
 访问共享目录
 
     sudo mkdir /mnt/zliang-pc
