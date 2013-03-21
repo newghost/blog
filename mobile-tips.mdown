@@ -1,6 +1,5 @@
 
-
-Android: 
+Android:
 ====
 [build on device](http://developer.android.com/tools/building/building-eclipse.html)
 
@@ -15,10 +14,74 @@ Tips
 ----
 [Custom 404 on Android](http://stackoverflow.com/questions/4101331/editing-or-creating-a-custom-web-page-not-available)
 
+装载本地文件，自定义404，去除WebView右侧空白:
 
+    public class WebViewActivity extends Activity {
+    
+        public String PAGE_INDEX     = "file:///android_asset/web/discovery.html";
+        public String PAGE_404 		= "file:///android_asset/web/404.html"; 
+    
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            initSysUI();
+            initWebView();
+        }
+    
+        @SuppressLint("SetJavaScriptEnabled")
+        protected void initWebView() {  
+            final WebView webView;
+    
+            webView = (WebView) this.findViewById(R.id.wv_oauth);
+            webView.setWebViewClient(new WebViewClient() {
+                @Override
+                public void onReceivedError (WebView view, int errorCode,
+                    String description, String failingUrl) {
+                    view.stopLoading();
+                    view.loadUrl(PAGE_404);
+                }
+            });
+            
+            //Hidden the blank scroll bar on the right.
+            webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
+    
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.getSettings().setDomStorageEnabled(true);
+    
+            webView.addJavascriptInterface(new Object() {
+            	public void loadPage(String page) {
+            		webView.loadUrl("file:///android_asset/web/" + page);
+            	}
+    
+                public void loadUrl(String url) {
+                    webView.loadUrl(url);
+                }
+            }, "ELMob");
+    
+            //webView.loadUrl(PAGE_404);
+            webView.loadUrl(PAGE_INDEX);
+        }
+    
+        protected void initSysUI(){
+            this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+    
+            this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    
+            setContentView(R.layout.activity_web_view);
+        }
+    }
 
+position: fixed 不工作, 添加: user-scalable=no
 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+select元素无法弹出option, 将其父元素设置为position: relative
+
+    #lottery>ul {
+      width: 20000px;
+      position: relative;
+    }
 
 
 
