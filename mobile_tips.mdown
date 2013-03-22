@@ -94,7 +94,7 @@ iOS
 General
 ====
 
-[Do not use shadow, image, opacity, use touch event, onclick happen with a alight delay](http://mir.aculo.us/2010/06/04/making-an-ipad-html5-app-making-it-really-fast/) [Reference 2](https://developer.mozilla.org/en-US/docs/DOM/Touch_events)
+[Do not use shadow, image, opacity, use touch event, onclick happen with a slight delay](http://mir.aculo.us/2010/06/04/making-an-ipad-html5-app-making-it-really-fast/) [Reference 2](https://developer.mozilla.org/en-US/docs/DOM/Touch_events)
 
     //$navbtns.bind("click", function (e) {
     $navbtns.bind('touchstart', function (e) {
