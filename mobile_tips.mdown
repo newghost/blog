@@ -1,5 +1,4 @@
-
-Android:
+Android
 ====
 [build on device](http://developer.android.com/tools/building/building-eclipse.html)
 
@@ -90,3 +89,18 @@ iOS
 ====
 
 [Custom 404 on iOS](http://stackoverflow.com/questions/4497120/how-to-find-the-404-error-when-i-am-uisng-a-webview-based-application-and-the-se)
+
+
+General
+====
+
+[Do not use shadow, image, opacity, use touch event, onclick happen with a alight delay](http://mir.aculo.us/2010/06/04/making-an-ipad-html5-app-making-it-really-fast/) [Reference 2](https://developer.mozilla.org/en-US/docs/DOM/Touch_events)
+
+    //$navbtns.bind("click", function (e) {
+    $navbtns.bind('touchstart', function (e) {
+      $navbtns.removeClass("selected");
+      $(this).addClass("selected");
+    });
+
+
+ 
