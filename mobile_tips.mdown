@@ -102,5 +102,11 @@ General
       $(this).addClass("selected");
     });
 
+In Zepto touchstart is faster than tap [equal: touchstart + shortdelay + touchend]:
 
+    }).bind(compatEvent('touchend'), function(e){
+        ....
+        touch.el.trigger('tap')
+        ....
+    }).bind('touchcancel', function(){
  
