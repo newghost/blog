@@ -109,4 +109,7 @@ In Zepto touchstart is faster than tap [equal: touchstart + shortdelay + touchen
         touch.el.trigger('tap')
         ....
     }).bind('touchcancel', function(){
- 
+
+Detect mobile device: [reference](http://stackoverflow.com/questions/11381673/javascript-solution-to-detect-mobile-browser)
+
+    
