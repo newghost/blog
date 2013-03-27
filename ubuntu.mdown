@@ -16,6 +16,8 @@ Ubuntu 软件安装
     PATH=/usr/local/Trolltech/Qt-4.8.4/bin:$PATH
     export PATH
 
+Windows2003 [开机自动登录](http://zhidao.baidu.com/question/14067049.html)
+
 将某个脚本设置为可执行，并随机自动运行
 
     sudo chmod -R  777  /etc/apache/start.sh
