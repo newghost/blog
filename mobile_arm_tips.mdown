@@ -91,6 +91,36 @@ iOS
 [Custom 404 on iOS](http://stackoverflow.com/questions/4497120/how-to-find-the-404-error-when-i-am-uisng-a-webview-based-application-and-the-se)
 
 
+
+Debian:
+====
+
+[Qt4_on_the_Raspberry_Pi](http://qt-project.org/wiki/apt-get_Qt4_on_the_Raspberry_Pi)
+
+LXDE: [Lightweight X11 Desktop Environment](http://lxde.org/)
+
+startx: [initialize an X session](http://www.x.org/archive/X11R6.8.1/doc/startx.1.html)
+
+xinit: [r](http://www.x.org/archive/X11R6.8.1/doc/xinit.1.html)
+
+pcmanfm: [file manager with tabbed browsing](https://wiki.archlinux.org/index.php/PCManFM)
+
+xscreensaver: [framework for blanking and locking the screen.](http://en.wikipedia.org/wiki/XScreenSaver)
+
+lxtask: Task Manager
+
+lxpanel: 
+- [standard panel of LXDE](http://wiki.lxde.org/en/LXPanel)
+- [removing/hiding lxpanel](http://forums.linuxmint.com/viewtopic.php?f=175&t=82194)
+
+    /etc/xdg/lxsession/LXDE/autostart
+
+lxsession: [standard session manager](http://wiki.lxde.org/en/LXSession)
+
+openbox: [window manager with extensive standards support](http://zh.wikipedia.org/zh-cn/Openbox)
+
+
+
 General
 ====
 
