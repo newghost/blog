@@ -142,4 +142,12 @@ In Zepto touchstart is faster than tap [equal: touchstart + shortdelay + touchen
 
 Detect mobile device: [reference](http://stackoverflow.com/questions/11381673/javascript-solution-to-detect-mobile-browser)
 
+Deep link: Hash code will find the anchor & element with id too
+
+    http://excample.com/url#slide2
+    <ul>
+      <li>Slide 1</li>
+      <li id="slide2">Slide 2</li>   <!-- Will localed here -->
+    </ul>
+
     
