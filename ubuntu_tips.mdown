@@ -311,3 +311,4 @@ Which directory the script file resides?
     BASEDIR=$(dirname $0)
     echo $BASEDIR
 
+[Timezone IDs](http://msdn.microsoft.com/en-us/library/gg154758.aspx)
