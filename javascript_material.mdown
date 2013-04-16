@@ -345,6 +345,45 @@ sleep, delay, timer
 
     }, 10000);
 
+OOP
+----
+
+[recommendation](https://github.com/joyent/node/wiki/API-changes-between-v0.8-and-v0.10)
+
+    // Broken-Style Inheritance, which has never been safe or wise
+    // but is shown on many broken tutorials around the web.
+    function Child() {}
+    Child.prototype = new Parent(); // <-- NEVER EVER DO THIS!!
+    // If you see anyone doing this in any javascript library ever,
+    // post a bug telling them that it is a huge terrible mistake!
+    // Inheriting from a class should not call that class's ctor
+    // on the prototype shared with EVERY instance of the child class!
+    [ Why not? You don't provide any real argument for this statement! ]
+    
+    // Correct-Style Inheritance
+    function Child() {
+      Parent.call(this);
+    }
+    Child.prototype = Object.create(Parent.prototype, {
+      constructor: {
+        value: Child,
+        enumerable: false,
+        writable: true,
+        configurable: true
+      }
+    });
+
+[Setter & Getter](http://killdream.github.io/blog/2011/10/understanding-javascript-oop/)
+
+    //Property, support IE9+
+    Object.defineProperty(nav, 'loading', {
+      set: function(value) {
+        value
+          ? $loading.show()
+          : $loading.hide();
+      }
+    });
+
 
 5. Web Develop
 ====
