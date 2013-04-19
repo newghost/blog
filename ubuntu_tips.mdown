@@ -250,7 +250,7 @@ Git:
     GitClient for Ubuntu: Optional Rabbits
     http://tortoisehg.bitbucket.org/download/index.html
     Git Commit / Push
-    提交请求： git commit -m 'first commit'
+    提交请求： git commit -ma 'first commit'
     Push请求：git push origin master
     Git Update / Sync
     Fetch: git fetch origin master
