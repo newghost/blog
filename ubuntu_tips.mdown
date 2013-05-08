@@ -307,9 +307,14 @@ Tar  [系统备份](http://www.yesure.net/archives/6984.html)
     sudo tar -xvpzf /media/gpan/ubuntubak.tgz -C /
 
 
-kill process in Linux
+进程 process
 
+    # 杀死指定进程
     ps aux || grep process_name
+    # 查看进程
+    ps -e
+    # 杀死进程
+    sudo kill port
 
 Which directory the script file resides?
 
