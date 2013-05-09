@@ -154,9 +154,16 @@ Raspberry Pi
 https://github.com/search?q=raspberry&type=Repositories&ref=searchresults
 * NodeJS supported (Armv6)
 
+BeagleBone
+----
+* [Cortex-A8](http://www.csdn.net/article/2013-05-02/2815109-ArduinoUno-vs-BeagleBone-vs-RaspberryPi)
+
+
 Arduino
 ----
+* Doesn't support NodeJS, yet.
 * [Open source hardware](http://www.arduino.cc/)
+
 
 4. JavaScript
 ====
