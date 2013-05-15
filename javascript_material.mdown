@@ -391,6 +391,17 @@ OOP
       }
     });
 
+Construcotr: Why the results is different, [reason](http://stackoverflow.com/questions/1978049/what-values-can-a-constructor-return-to-avoid-returning-this)
+
+    function abc(name){
+      this.name = name
+      return name;
+    }
+    
+    console.log(new abc("foot"));   // { name: "foot" }
+    console.log(new abc({}));       // { }
+
+
 
 5. Web Develop
 ====
