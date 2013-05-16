@@ -150,4 +150,7 @@ Deep link: Hash code will find the anchor & element with id too
       <li id="slide2">Slide 2</li>   <!-- Will localed here -->
     </ul>
 
+[Android does not support CSS overflow:auto](http://code.google.com/p/android/issues/detail?id=2911)
+
+
     
