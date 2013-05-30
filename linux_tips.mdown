@@ -337,14 +337,18 @@ Which directory the script file resides?
 阿里云Debian服务器安装:
 ====
 
-安装FTP:
-----
+[安装FTP](http://www.linuxdiyf.com/viewarticle.php?id=146105)
 
-　　apt-get update
 　　apt-get install vsftpd
+　　
+　　cp /etc/vsftpd.conf vsftpd.conf.bk
+    vim /etc/vsftpd.conf
 
-安装NodeJS: [https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager]
-----
+    /etc/init.d/vsftpd start   #启动服务
+    /etc/init.d/vsftpd restart #重启服务
+    /etc/init.d/vsftpd stop    #停止服务
+
+安装NodeJS[https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager]
 
     sudo apt-get install python g++ make checkinstall
     mkdir ~/src && cd $_
