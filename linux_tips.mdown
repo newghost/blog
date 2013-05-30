@@ -337,7 +337,7 @@ Which directory the script file resides?
 阿里云Debian服务器安装:
 ====
 
-[安装FTP](http://www.linuxdiyf.com/viewarticle.php?id=146105)
+[安装FTP](http://www.dedecms.com/knowledge/servers/linux-bsd/2012/0819/8400.html)
 
 　　apt-get install vsftpd
 　　
