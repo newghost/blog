@@ -354,3 +354,17 @@ Which directory the script file resides?
     checkinstall #(remove the "v" in front of the version number in the dialog)
     sudo dpkg -i node_*
 
+设置Node.JS Shell 启动时自动运行
+
+    https://gist.github.com/peterhost/715255
+    https://github.com/chovy/node-startup/blob/master/init.d/node-app
+    https://github.com/hectorcorrea/hectorcorrea.com/blob/master/etc/forever-initd-hectorcorrea.sh
+    http://stackoverflow.com/questions/13385029/automatically-start-forever-node-on-system-restart
+    http://stackoverflow.com/questions/11275870/how-can-i-automatically-start-a-node-js-application-in-amazon-linux-ami-on-aws
+    https://gist.github.com/nariyu/1211413
+    
+    
+
+
+
+
