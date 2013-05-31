@@ -354,16 +354,17 @@ Which directory the script file resides?
     checkinstall #(remove the "v" in front of the version number in the dialog)
     sudo dpkg -i node_*
 
-设置Node.JS 应用一直运行, Using [Forever](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever), [introduce](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever)
-    
+设置Node.JS 应用一直运行
+
+Using [Forever](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever), [introduce](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever)
+
     sudo npm install forever -g
     forever start  /path/to/app.js
     forever list
     forever stop 0
-    
-    
-    
 
+Using [\etc\init.d\](http://xmodulo.com/2013/01/how-to-automatically-start-program-on-boot-in-debian.html)
 
-
-
+    sudo chmod 755 /etc/init.d/foobar
+    sudo update-rc.d foobar defaults
+    sudo update-rc.d -f foobar remove
