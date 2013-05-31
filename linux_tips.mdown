@@ -339,10 +339,9 @@ Which directory the script file resides?
 
 安装[FTP](http://www.thomas-krenn.com/en/wiki/Setup_FTP_Server_under_Debian)
 
-
-　　apt-get install proftpd
-    /etc/init.d/proftpd reload
-    /etc/init.d/proftpd start   #启动服务   
+　　$ apt-get install proftpd
+    $ /etc/init.d/proftpd reload
+    $ /etc/init.d/proftpd start   #启动服务   
 
 安装[NodeJS](https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager)
 
