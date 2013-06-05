@@ -1,0 +1,52 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides: node
+# Required-Start: $network $remote_fs $local_fs
+# Required-Stop: $network $remote_fs $local_fs
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: start and stop node
+# Description: Node process for app
+### END INIT INFO
+
+WEB_DIR='/var/www/icalc'
+WEB_APP='svr/icalc_svr.js'
+
+NODE_ENV='production'
+NODE_EXEC=/usr/local/bin/node
+
+start()
+{
+    echo "Starting node app..."
+    #important! change current folder, in order to make the relative path work.
+    cd $WEB_DIR
+    #make it as a demon process
+    while true; do
+        $NODE_EXEC $WEB_DIR/$WEB_APP
+        echo "Stopped unexpected, restarting \r\n\r\n"
+        sleep 5
+    done
+}
+
+stop()
+{
+    echo "This program cann't be stopped"
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop
+        #start
+        ;;
+    *)
+        echo "Usage: /etc/init.d/node-app {start|stop|restart}"
+        ;;
+esac
+
+exit 0
