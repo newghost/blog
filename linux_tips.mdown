@@ -207,6 +207,11 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
 
     sudo sublime /etc/rc.local
     xbacklight -set 80
+    
+
+[wireshark 网络扫描]
+
+    sudo apt-get wireshark
 
 
 后台执行脚本且无输出（nohup）：nohup ./enlogic.sh &
