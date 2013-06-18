@@ -212,6 +212,8 @@ Magento安装：安装: http://www.magentochina.org/bbs/forum.php?mod=viewthread
 [wireshark 网络扫描]
 
     sudo apt-get wireshark
+    #custom filter, etc:
+    ip.addr == 192.168.1.95 && http
 
 
 后台执行脚本且无输出（nohup）：nohup ./enlogic.sh &
