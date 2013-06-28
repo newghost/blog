@@ -79,8 +79,8 @@ MongoDB
     mkdir -p /data/db   #数据目录
     curl -O http://downloads.mongodb.org/linux/mongodb-linux-i686-latest.tgz  #下载压缩包
     tar xzf mongodb-linux-i386-latest.tgz  #解压
-    bin/mongod run &    #启动服务
-    bin/mongo           #js交互客户端
+    [sudo] bin/mongod run &    #启动服务
+    [sudo] bin/mongo           #js交互客户端
 
 重启Apache
 
