@@ -161,7 +161,7 @@ BeagleBone
 
 Arduino
 ----
-* Doesn't support NodeJS, yet.
+* Doesn't support yet, but [communicate](http://blog.safaribooksonline.com/2013/07/16/javascript-powered-arduino-with-johnny-five).
 * [Open source hardware](http://www.arduino.cc/)
 
 
