@@ -344,6 +344,12 @@ Which directory the script file resides?
 [Timezone IDs](http://msdn.microsoft.com/en-us/library/gg154758.aspx)
 
 
+远程SSH登录
+
+    $ssh root@192.168.1.1
+    #Enter password
+
+
 
 阿里云Debian服务器安装:
 ====
