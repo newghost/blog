@@ -346,7 +346,7 @@ Which directory the script file resides?
 
 远程SSH登录
 
-    $ssh root@192.168.1.1
+    ssh root@192.168.1.1
     #Enter password
 
 
