@@ -398,3 +398,32 @@ Using \etc\init.d\, [recommend](http://xmodulo.com/2013/01/how-to-automatically-
     sudo chmod 755 /etc/init.d/foobar
     sudo update-rc.d foobar defaults
     sudo update-rc.d -f foobar remove
+
+安装svn服务器
+
+    apt-get install subversion
+    mkdir /svn
+    
+    #start svn server
+    svnserve -d
+    #stop svn server, find the pid and kill the pid: kill 6800
+    ps x | grep svn
+    
+    #create a new svn repo
+    mkdir /svn/icalc
+    svnadmin create /svn/icalc
+    #check it
+    ls /svn/icalc
+    
+    #import & commit
+    svn import /var/www/icalc file:///svn/icalc -m "initial"
+    #try to checkout at: svn://42.96.XXX.XX/svn/icalc
+    
+    #update password for this repo, add new username & password for this repo
+    nano /svn/icalc/conf/passwd
+    nano /svn/icalc/conf/svnserve.conf
+        anon-access = none     #set unauthenticated users none
+        auth-access = write    #set authenticated user
+        password-db = passwd   #remove comments
+    
+    
