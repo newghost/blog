@@ -336,6 +336,11 @@ Tar  [系统备份](http://www.yesure.net/archives/6984.html)
     # 杀死进程
     sudo kill port
 
+man 命令帮助提示
+
+    man fdisk  # 按q退出
+
+
 awk分析与统计
 
     # 打印最近登录的用户
@@ -347,7 +352,15 @@ grep文件查找:global search regular expression
 
     # 查找当前目录所以包含dashboard的文件即行号
     grep -rn dashboard .
-    
+
+
+df查看硬盘使用情况
+
+    df -lh #l: --local file systems; h: --human-readable format (e.g., 1K 234M 2G)
+
+du杳看目录大小
+
+    df -sh #s: --summarize; h: --human-readable
 
 
 Which directory the script file resides?
@@ -393,11 +406,11 @@ Using [Forever](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever),
     forever list
     forever stop 0
 
-Using /etc/init.d/, [recommend](http://xmodulo.com/2013/01/how-to-automatically-start-program-on-boot-in-debian.html), [sample, node-app](https://raw.github.com/newghost/blog/master/node-app),　设置默认启动时开启/关闭:
+Using /etc/init.d/, [recommend](http://xmodulo.com/2013/01/how-to-automatically-start-program-on-boot-in-debian.html), [sample, node-app](https://raw.github.com/newghost/blog/master/node-app),　设置随开机时启动:
 
     sudo chmod 755 /etc/init.d/foobar
-    sudo update-rc.d foobar defaults
-    sudo update-rc.d -f foobar remove
+    sudo update-rc.d foobar defaults     #开机时启动
+    sudo update-rc.d -f foobar remove　　#开机时不启动
 
 安装svn服务器
 
