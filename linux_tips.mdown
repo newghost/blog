@@ -443,5 +443,7 @@ Using /etc/init.d/, [recommend](http://xmodulo.com/2013/01/how-to-automatically-
     #update default user/usergroup & OPTIONS
     start-stop-daemon --start --quiet --oknodo --chuid root:root --exec /usr/bin/svnserve -- $OPTIONS
 
-    
-    
+安装MongoDB服务器
+- mongo 安装教程 [Install mongodb on Debian](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-debian/)
+- mongo 使用教程 [User manual on mongo](http://docs.mongodb.org/manual/mongo/)
+
