@@ -335,6 +335,14 @@ Tar  [系统备份](http://www.yesure.net/archives/6984.html)
     ps -e
     # 杀死进程
     sudo kill port
+    
+查看内存
+
+    free
+
+查看指定进程内存
+
+    pmap pid
 
 man 命令帮助提示
 
@@ -375,6 +383,7 @@ Which directory the script file resides?
 
     ssh root@192.168.1.1
     #Enter password
+
 
 
 
