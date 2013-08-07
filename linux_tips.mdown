@@ -471,7 +471,7 @@ mongo 使用教程 [User manual on mongo](http://docs.mongodb.org/manual/mongo/)
     #重启/启动／关闭服务
     /etc/init.d/mongodb start/stop/restart
     #使用用户名密码登录
-    mongo yourdomain.com:/products -u Alice -p Moon1234
+    mongo yourdomain.com/products -u Alice -p Moon1234
     
 
 
