@@ -463,15 +463,20 @@ mongo 使用教程 [User manual on mongo](http://docs.mongodb.org/manual/mongo/)
     #测试远程连接
     cd ~/Downloads/mongodb/bin
     mongo [your ip adress]
-    #修改默认配置, 启用认证登录: auth = true
-　　nano /etc/mongodb.conf
-　　#重启/启动／关闭后即可登录，但操作需要认证
-　　/etc/init.d/mongodb start/stop/restart
 
-添加认证用户[Add User go DataBase](http://docs.mongodb.org/manual/tutorial/add-user-to-database/)
-
+    #启动mongo client并添加认证用户[Add User go DataBase](http://docs.mongodb.org/manual/tutorial/add-user-to-database/)
     use products
     db.addUser( { user: "Alice", pwd: "Moon1234", roles: [ "readWrite", "dbAdmin" ] } )
+
+    #启用认证登录, 默认为允许匿名登录: auth = true
+　　nano /etc/mongodb.conf
+　　#重启/启动／关闭服务，
+　　/etc/init.d/mongodb start/stop/restart
+　　
+　　#使用添加的用户名密码登录
+　　mongo yourdomain.com:/products -u Alice -p Moon1234
+    
+    
 
 
 
