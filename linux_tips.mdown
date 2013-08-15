@@ -406,7 +406,10 @@ Which directory the script file resides?
     checkinstall #(remove the "v" in front of the version number in the dialog)
     sudo dpkg -i node_*
 
-设置Node.JS 应用一直运行
+设置Node.JS 应用一直运行;
+
+[Daemon](https://wiki.debian.org/Daemon)
+[InitScripts](https://wiki.debian.org/LSBInitScripts)
 
 Using [Forever](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever), [introduce](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever)
  [Forever running as service](http://labs.telasocial.com/nodejs-forever-daemon/)
