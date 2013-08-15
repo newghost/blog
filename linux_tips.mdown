@@ -409,6 +409,7 @@ Which directory the script file resides?
 设置Node.JS 应用一直运行
 
 Using [Forever](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever), [introduce](http://blog.nodejitsu.com/keep-a-nodejs-server-up-with-forever)
+ [Forever running as service](http://labs.telasocial.com/nodejs-forever-daemon/)
 
     sudo npm install forever -g
     forever start  /path/to/app.js
