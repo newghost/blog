@@ -491,3 +491,6 @@ mongo 脚本
 
     db.emails.update( { _id: { $gt : ObjectId("522856fd613897af1f00001b") } }, { $set : { send: false } }, { multi: true } )
 
+创建不可重复索引，按升序排列：
+
+    db.emails.ensureIndex( { email: 1 }, { unique: true } )
