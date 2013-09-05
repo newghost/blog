@@ -484,4 +484,10 @@ mongo 学习教程 [github io](http://mongodb.github.io/node-mongodb-native/)
     #批量更新数据, 
     db.articles.update({}, {$set: {verify: 1}}, false, true);
 
+mongo 脚本
+====
+
+更新在某ID之后的所有值：
+
+    db.emails.update( { _id: { $gt : ObjectId("522856fd613897af1f00001b") } }, { $set : { send: false } }, { multi: true } )
 
