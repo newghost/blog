@@ -494,3 +494,7 @@ mongo 脚本
 创建不可重复索引，按升序排列：
 
     db.emails.ensureIndex( { email: 1 }, { unique: true } )
+
+批量更新某属性值
+
+    db.articles.update( { content: { $exists : false } }, { $set : { content: '' } }, { multi: true } )
