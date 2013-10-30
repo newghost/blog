@@ -356,7 +356,11 @@ awk分析与统计
     # 以':'分隔，对第４列求和，并打印
     cat /etc/passwd | awk -F ':' '{sum= sum + $4} END {print sum}'
 
-grep文件查找:global search regular expression
+find查找文件: 
+
+    find / -name 'program.c'
+
+grep全文搜索，文件查找:global search regular expression
 
     # 查找当前目录所以包含dashboard的文件即行号
     grep -rn dashboard .
