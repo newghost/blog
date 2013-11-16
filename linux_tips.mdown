@@ -502,3 +502,14 @@ mongo 脚本
 批量更新某属性值
 
     db.articles.update( { content: { $exists : false } }, { $set : { content: '' } }, { multi: true } )
+
+按日期查找数据(通过ObjectID)
+
+    function timeStamp(time) {
+    	time = new Date(time);
+    	var hex = (time/1000 | 0).toString(16);
+    	var object = ObjectId(hex + "0000000000000000")
+    	return object;
+    }
+    
+    db.articles.find({ _id: { $lt:timeStamp("2013-10-10") } }).count()
