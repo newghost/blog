@@ -513,3 +513,8 @@ mongo 脚本
     }
     
     db.articles.find({ _id: { $lt:timeStamp("2013-10-10") } }).count()
+    
+按日期更新数据
+
+    db.articles.update({ _id: { $lt:timeStamp("2013-10-10") } }, { $set : { hottest: ["5226bceb583e062803000007"] } }, { multi: true } )
+
