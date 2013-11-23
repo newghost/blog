@@ -460,6 +460,21 @@ Using /etc/init.d/, [recommend](http://xmodulo.com/2013/01/how-to-automatically-
     #[设为默认启动项](http://www.everville.de/pages/howtos/linux/svnserve/index.html)
     #update default user/usergroup & OPTIONS
     start-stop-daemon --start --quiet --oknodo --chuid root:root --exec /usr/bin/svnserve -- $OPTIONS
+    
+Nginx
+----
+
+    apt-get install nginx
+
+    #经过nginx配置，node进程减少了2个(http-proxy, static-server由nginx代替)，初始内存占用减小了60M左右:
+    #目前此服务器默认开启: 两个nodejs进程，svn, mongodb, nginx, ftp，内存消耗:167008Kb
+
+    freroot@XXXXXXXXXXXXXXXXXX:~# free
+                 total       used       free     shared    buffers     cached
+    Mem:        507484     167008     340476          0       3832      60464
+    -/+ buffers/cache:     102712     404772
+    Swap:            0          0          0
+
 
 
 MongoDB
