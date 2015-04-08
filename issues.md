@@ -1,2 +1,12 @@
-1. Error when there is ? :   http://192.168.1.121:8051/?/icalc.html
-2. iCalc edit datagrid at detail form cannot popup suggetion items.
+TODO
+----
+
+自动登录功能
+
+Weibo登录
+
+QQ登录
+
+自适应宽屏
+
+上传PDF达大时自动调整功能
