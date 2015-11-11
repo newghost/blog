@@ -561,4 +561,4 @@ Markdown https://code.google.com/p/pagedown/
 
 安装redis  http://ourjs.com/detail/548d14be8a34fa3204000007
 
-安装nginx  http://ourjs.com/root/edit/5288ca0d92e3743803000001
+安装nginx  http://ourjs.com/detail/5288ca0d92e3743803000001
