@@ -557,17 +557,7 @@ Markdown https://code.google.com/p/pagedown/
     apt-get install --yes nodejs
 
 
-安装ftp
-
-    apt-get install proftpd
-    /etc/init.d/proftpd reload
-    /etc/init.d/proftpd start   #启动服务
-
-
-    groupadd ftp
-    useradd newghost -g ftp -d /var/www
-    passwd newghost
-    chown newghost.ftp /var/www
+安装ftp http://ourjs.com/detail/551507e71e8c70851600000e
     
     
      
