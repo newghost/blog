@@ -546,11 +546,11 @@ Markdown https://code.google.com/p/pagedown/
 新装ourjs运行环境
 ====
 
-安装nginx
+安装nginx http://ourjs.com/detail/5288ca0d92e3743803000001
 
     apt-get install nginx
 
-安装Linux
+安装nodejs [通过apt-get]
 
     apt-get install curl
     curl --silent --location https://deb.nodesource.com/setup_0.12 | bash -
