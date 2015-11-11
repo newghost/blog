@@ -558,6 +558,7 @@ Markdown https://code.google.com/p/pagedown/
 
 
 安装ftp http://ourjs.com/detail/551507e71e8c70851600000e
-    
+
+安装redis http://ourjs.com/detail/548d14be8a34fa3204000007
     
      
